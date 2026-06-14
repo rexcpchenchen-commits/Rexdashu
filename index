@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>美利尊享．保費融資傳承規劃 互動總覽</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+:root{
+  /* 明亮 · 象牙暖金系 */
+  --paper:#f7f3ea;          /* 主底 象牙 */
+  --paper2:#fffdf8;         /* 卡片底 近白 */
+  --cardline:#e4dcc8;       /* 細線 */
+  --ink:#2a2418;            /* 主文字 深墨棕 */
+  --ink-soft:#6b6253;       /* 次文字 */
+  --gold:#b8893a;           /* 金棕 主重點 */
+  --gold-deep:#946c25;
+  --gold-lite:#d9b876;
+  --forest:#2f5e4f;         /* 深墨綠 第二重點 */
+  --forest-lite:#4d8270;
+  --rose:#a84a52;           /* 課稅紅(暗紅磚) */
+  --rose-lite:#c47a80;
+  --teal:#3a7d92;           /* 放大藍綠 */
+  --teal-lite:#6aa6b8;
+  --plum:#7a5a86;           /* 自備紫 */
+  --plum-lite:#a385ad;
+  --green:#5a8a4a;          /* 實拿綠 */
+  --green-lite:#7caa68;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans TC',sans-serif;
+  background:
+    radial-gradient(1100px 520px at 88% -8%, rgba(184,137,58,.10), transparent 60%),
+    radial-gradient(800px 480px at -5% 102%, rgba(47,94,79,.08), transparent 55%),
+    var(--paper);
+  background-attachment:fixed;color:var(--ink);line-height:1.78;-webkit-font-smoothing:antialiased}
+.shell{max-width:1080px;margin:0 auto;padding-left:clamp(20px,5vw,24px);padding-right:clamp(20px,5vw,24px)}
+
+/* 切換器 */
+.switcher{position:sticky;top:0;z-index:200;background:rgba(247,243,234,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--cardline)}
+.switcher .inner{max-width:1080px;margin:0 auto;padding-top:13px;padding-bottom:13px;padding-left:clamp(20px,5vw,24px);padding-right:clamp(20px,5vw,24px);display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.switcher .brand{font-family:'Noto Serif TC',serif;color:var(--gold-deep);font-weight:700;font-size:15px;letter-spacing:.03em}
+.seg-ctrl{display:flex;background:#efe7d6;border:1px solid var(--cardline);border-radius:999px;padding:4px}
+.seg-wrap{display:flex;flex-direction:column;gap:7px}
+.seg-row{display:flex;align-items:center;gap:9px}
+.seg-lab{font-size:13px;font-weight:700;color:var(--gold-d);min-width:30px}
+.seg-ctrl button{border:none;background:transparent;color:var(--ink-soft);font-family:inherit;font-weight:700;font-size:13.5px;padding:7px 14px;border-radius:999px;cursor:pointer;transition:.3s;min-width:42px}
+.seg-ctrl button.on{background:linear-gradient(135deg,var(--gold),var(--gold-deep));color:#fff;box-shadow:0 4px 12px -3px rgba(148,108,37,.5)}
+.prog{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--gold-deep),var(--gold-lite));width:0;z-index:100}
+
+/* HERO */
+.hero{padding-top:48px;padding-bottom:48px;position:relative;overflow:hidden;background:var(--paper);z-index:1}
+.eyebrow{font-size:13px;letter-spacing:.42em;color:var(--gold-deep);font-weight:700;text-indent:.42em;margin-bottom:22px}
+.hero h1{position:relative;z-index:2;font-family:'Noto Serif TC',serif;font-weight:900;font-size:clamp(31px,5.6vw,60px);line-height:1.2;color:var(--ink)}
+.hero h1 .em{color:transparent;background:linear-gradient(100deg,var(--gold-deep),var(--gold),var(--gold-lite));-webkit-background-clip:text;background-clip:text}
+.hero .lede{margin-top:22px;max-width:570px;font-size:clamp(15px,2vw,17px);color:var(--ink-soft);font-weight:400}
+.hero .case{margin-top:36px;display:flex;gap:32px;flex-wrap:wrap;padding:22px 26px;background:var(--paper2);border:1px solid var(--cardline);border-radius:18px;box-shadow:0 16px 40px -28px rgba(80,60,20,.4)}
+.hero .case .n{font-size:12px;color:var(--ink-soft);letter-spacing:.05em}
+.hero .case .v{font-family:'Noto Serif TC',serif;font-size:25px;font-weight:700;margin-top:4px;color:var(--ink)}
+.hero .case .v small{font-size:13px;color:var(--gold-deep);font-weight:400;margin-left:3px}
+
+.sec{padding:66px 0;border-top:1px solid var(--cardline)}
+.sec-head{display:flex;align-items:baseline;gap:18px;margin-bottom:34px}
+.sec-no{font-family:'Noto Serif TC',serif;font-size:15px;color:#fff;font-weight:700;background:linear-gradient(135deg,var(--forest),var(--forest-lite));border-radius:999px;padding:6px 16px;white-space:nowrap;box-shadow:0 4px 12px -4px rgba(47,94,79,.5)}
+.sec-title{font-family:'Noto Serif TC',serif;font-size:clamp(23px,3.4vw,34px);font-weight:900;line-height:1.3;color:var(--ink)}
+.sec-sub{color:var(--ink-soft);font-weight:400;margin-top:9px;max-width:620px;font-size:15px}
+.reveal{opacity:0;transform:translateY(26px);transition:.8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* P1 */
+.fundbar{height:94px;border-radius:16px;display:flex;overflow:hidden;border:1px solid var(--cardline);box-shadow:0 18px 44px -24px rgba(80,60,20,.5);margin:8px 0 24px}
+.fundbar .seg{display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;width:0;transition:width 1.3s cubic-bezier(.2,.8,.2,1)}
+.fundbar .seg .lab{font-weight:700;font-size:16px}
+.fundbar .seg .pct{font-size:12.5px;opacity:.92;margin-top:3px}
+.seg.own{background:linear-gradient(135deg,#8a6a96,#6f5079)}
+.seg.loan{background:linear-gradient(135deg,#4a8ea2,#357082)}
+.dualcard{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.dc{background:var(--paper2);border:1px solid var(--cardline);border-radius:14px;padding:20px;box-shadow:0 10px 28px -22px rgba(80,60,20,.5)}
+.dc .n{font-size:13.5px;color:var(--ink-soft)}
+.dc .v{font-family:'Noto Serif TC',serif;font-size:29px;font-weight:700;margin-top:6px}
+.dc.o .v{color:var(--plum)}.dc.l .v{color:var(--teal)}
+.dc .twd{font-family:'Noto Serif TC',serif;font-size:17px;font-weight:700;color:var(--gold-d);margin-top:2px}
+.dc .s{font-size:12px;color:var(--ink-soft);margin-top:6px}
+
+/* P2 槓桿 */
+.levwrap{display:flex;align-items:flex-end;justify-content:center;gap:clamp(16px,5vw,56px);height:300px;margin-top:10px;padding:0 6px}
+.levcol{display:flex;flex-direction:column;align-items:center;flex:1;max-width:150px;height:100%;justify-content:flex-end}
+.levbar{width:78px;border-radius:12px 12px 0 0;position:relative;height:0;transition:height 1.1s cubic-bezier(.2,.8,.2,1);box-shadow:0 14px 32px -16px rgba(80,60,20,.6)}
+.levbar .x{position:absolute;top:-34px;left:50%;transform:translateX(-50%);font-family:'Noto Serif TC',serif;font-weight:900;font-size:22px;white-space:nowrap}
+.lb1{background:linear-gradient(180deg,#7caa68,#5a8a4a)}.lb2{background:linear-gradient(180deg,var(--gold-lite),var(--gold-deep))}.lb3{background:linear-gradient(180deg,#c47a80,#a84a52)}
+.lb1 .x{color:var(--green)}.lb2 .x{color:var(--gold-deep)}.lb3 .x{color:var(--rose)}
+.levcap{margin-top:16px;text-align:center;font-size:13.5px;font-weight:500;color:var(--ink)}
+.levcap small{display:block;color:var(--ink-soft);font-size:11.5px;font-weight:400;margin-top:3px}
+
+/* P3 flow */
+.flow{display:flex;align-items:stretch;gap:10px;flex-wrap:wrap;margin-top:8px}
+.fstep{flex:1;min-width:130px;background:var(--paper2);border:1px solid var(--cardline);border-radius:14px;padding:18px 14px;text-align:center;box-shadow:0 10px 28px -22px rgba(80,60,20,.5)}
+.fstep .tag{font-size:11.5px;color:var(--gold-deep);letter-spacing:.08em;font-weight:700}
+.fstep .big{font-family:'Noto Serif TC',serif;font-size:21px;font-weight:700;margin:8px 0 4px}
+.fstep .cap{font-size:11.5px;color:var(--ink-soft)}
+.fstep.s1 .big{color:var(--gold-deep)}.fstep.s2 .big{color:var(--teal)}.fstep.s3 .big{color:var(--rose);font-size:14px}.fstep.s4 .big{color:var(--green)}
+.flowarrow{align-self:center;color:var(--gold);font-size:22px;font-weight:900}
+@media(max-width:680px){.flowarrow{transform:rotate(90deg)}}
+
+/* 表格 */
+.tbl{width:100%;border-collapse:separate;border-spacing:0;margin-top:8px;font-size:13px;border:1px solid var(--cardline);border-radius:14px;overflow:hidden;background:var(--paper2)}
+.tbl th,.tbl td{padding:11px 9px;text-align:center;border-bottom:1px solid var(--cardline)}
+.tbl thead th{background:linear-gradient(135deg,var(--forest),var(--forest-lite));color:#fff;font-weight:700;font-size:12.5px}
+.tbl tbody tr:nth-child(even){background:#faf6ec}
+.tbl tbody tr:last-child td{border-bottom:none}
+.tbl .rowh{text-align:left;color:var(--ink-soft);font-weight:500}
+.tbl .pos{color:var(--green);font-weight:700}.tbl .neg{color:var(--rose);font-weight:700}
+.tbl .gold{color:var(--gold-deep);font-weight:700}
+.tblscroll{overflow-x:auto}
+
+/* P4 paths */
+.onetax{text-align:center;font-family:'Noto Serif TC',serif;font-size:clamp(18px,2.6vw,24px);font-weight:700;color:var(--gold-deep);margin:0 0 24px}
+.paths{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.pth{border-radius:16px;padding:24px;border:1px solid;box-shadow:0 12px 32px -24px rgba(80,60,20,.5)}
+.pth h3{font-family:'Noto Serif TC',serif;font-size:19px;margin-bottom:6px}
+.pth .tagline{font-size:12px;letter-spacing:.05em;margin-bottom:14px;font-weight:700}
+.pth p{font-size:14px;line-height:1.85;color:var(--ink)}
+.pth.taxed{border-color:rgba(168,74,82,.4);background:linear-gradient(180deg,rgba(168,74,82,.09),rgba(168,74,82,.02))}
+.pth.taxed h3,.pth.taxed .tagline{color:var(--rose)}
+.pth.free{border-color:rgba(58,125,146,.4);background:linear-gradient(180deg,rgba(58,125,146,.09),rgba(58,125,146,.02))}
+.pth.free h3,.pth.free .tagline{color:var(--teal)}
+.pth p b{color:var(--ink)!important}
+
+/* P5 hh */
+.hh{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.hcard{background:var(--paper2);border:1px solid var(--cardline);border-radius:16px;padding:22px 16px;text-align:center;position:relative;overflow:hidden;box-shadow:0 12px 30px -24px rgba(80,60,20,.5)}
+.hcard .topline{height:4px;width:100%;position:absolute;top:0;left:0}
+.hcard .n{font-weight:700;font-size:15px;color:var(--ink)}
+.hcard .per{font-size:11.5px;color:var(--ink-soft);margin-top:5px}
+.hcard .v{font-family:'Noto Serif TC',serif;font-size:28px;font-weight:900;margin-top:14px}
+.hcard .u{font-size:11px;color:var(--ink-soft);margin-top:2px}
+.hcard.h1 .topline{background:var(--rose)}.hcard.h1 .v{color:var(--rose)}
+.hcard.h2 .topline{background:var(--gold)}.hcard.h2 .v{color:var(--gold-deep)}
+.hcard.h3 .topline{background:var(--green)}.hcard.h3 .v{color:var(--green)}
+
+.takeaways{margin-top:28px;display:flex;flex-direction:column;background:var(--paper2);border:1px solid var(--cardline);border-radius:16px;padding:6px 22px;box-shadow:0 12px 30px -26px rgba(80,60,20,.5)}
+.takeaways .ti{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid var(--cardline);align-items:flex-start}
+.takeaways .ti:last-child{border-bottom:none}
+.takeaways .ti .mk{font-family:'Noto Serif TC',serif;color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-deep));font-weight:700;font-size:13px;min-width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.takeaways .ti .tx{font-size:14.5px;color:var(--ink);line-height:1.8;padding-top:1px}
+.takeaways .ti .tx b{color:var(--gold-deep)}
+
+.foot{padding:48px 0 80px;border-top:1px solid var(--cardline);color:var(--ink-soft);font-size:11.5px;line-height:1.9;font-weight:400}
+.foot .brand{font-family:'Noto Serif TC',serif;color:var(--gold-deep);font-size:15px;font-weight:700;margin-bottom:14px}
+
+@media(max-width:680px){.dualcard,.paths,.hh{grid-template-columns:1fr}.levwrap{height:240px;gap:14px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="prog" id="prog"></div>
+<div class="switcher"><div class="inner">
+  <div class="brand">美利尊享 · 保費融資傳承規劃</div>
+  <div class="seg-wrap">
+    <div class="seg-row"><span class="seg-lab">女性</span><div class="seg-ctrl"><button id="btn-f45" class="" onclick="pick('f45')">45</button><button id="btn-f50" class="on" onclick="pick('f50')">50</button><button id="btn-f55" class="" onclick="pick('f55')">55</button><button id="btn-f60" class="" onclick="pick('f60')">60</button><button id="btn-f65" class="" onclick="pick('f65')">65</button></div></div>
+    <div class="seg-row"><span class="seg-lab">男性</span><div class="seg-ctrl"><button id="btn-m45" onclick="pick('m45')">45</button><button id="btn-m50" onclick="pick('m50')">50</button><button id="btn-m55" onclick="pick('m55')">55</button><button id="btn-m60" onclick="pick('m60')">60</button><button id="btn-m65" onclick="pick('m65')">65</button></div></div>
+  </div>
+</div></div>
+
+<section class="hero shell">
+  <div class="eyebrow">美利尊享 · 外幣利率變動型終身壽險</div>
+  <h1>用三分之一的資金，<br>撐起<span class="em">完整的保障與傳承</span></h1>
+  <p class="lede">保費融資讓自有資金以小搏大；繼承發生時保險金放大、預留稅源，再以最低稅負規劃留住更多給家人。</p>
+  <div class="case" id="heroCase"></div>
+</section>
+
+<section class="sec" id="s1"><div class="shell">
+  <div class="sec-head reveal"><div class="sec-no">壹</div><div><div class="sec-title">資金結構：自己只出三分之一</div><div class="sec-sub">同一筆躉繳保費，拆成自己出的自備款，與向銀行借的融資借款。</div></div></div>
+  <div class="reveal" id="p1body"></div><div class="takeaways reveal" id="p1take"></div>
+</div></section>
+<section class="sec" id="s2"><div class="shell">
+  <div class="sec-head reveal"><div class="sec-no">貳</div><div><div class="sec-title">保障槓桿：以小搏大</div><div class="sec-sub">保障槓桿 ＝ 繼承人實拿 ÷ 自掏腰包。融資讓自備款的保障效益顯著放大。</div></div></div>
+  <div class="levwrap reveal" id="p2bars"></div><div class="takeaways reveal" id="p2take"></div>
+</div></section>
+<section class="sec" id="s2b"><div class="shell">
+  <div class="sec-head reveal"><div class="sec-no">參</div><div><div class="sec-title">各年度保障槓桿變化</div><div class="sec-sub">身故保額逐年增值，未融資與融資後淨槓桿同步微升。</div></div></div>
+  <div class="reveal tblscroll" id="p2btable"></div>
+</div></section>
+<section class="sec" id="s3"><div class="shell">
+  <div class="sec-head reveal"><div class="sec-no">肆</div><div><div class="sec-title">放大效應與預留稅源</div><div class="sec-sub">繳費當下的一小塊保費，繼承時放大為身故保額，正好用來償還融資與繳稅。</div></div></div>
+  <div class="flow reveal" id="p3flow"></div><div class="takeaways reveal" id="p3take"></div>
+</div></section>
+<section class="sec" id="s4"><div class="shell">
+  <div class="sec-head reveal"><div class="sec-no">伍</div><div><div class="sec-title">各年度 保單損益 vs 累計利息</div><div class="sec-sub">保單增值能否養出利息？覆蓋率達 100% 即代表損益足以支付該期間利息。</div></div></div>
+  <div class="reveal tblscroll" id="p4table"></div><div class="takeaways reveal" id="p4take"></div>
+</div></section>
+<section class="sec" id="s5"><div class="shell">
+  <div class="sec-head reveal"><div class="sec-no">陸</div><div><div class="sec-title">保險金的稅：兩條路</div><div class="sec-sub">保險金課稅依國稅局實質認定，走向兩條不同的路。</div></div></div>
+  <div class="onetax reveal">一稅不兩課　—　有遺產稅，就沒所得稅</div>
+  <div class="paths reveal">
+    <div class="pth taxed"><h3>路徑一　被實質課稅</h3><div class="tagline">課遺產稅 20%</div><p>保險金被認定為遺產，課遺產稅 20%。依一稅不兩課原則，已課遺產稅就<b>不再課最低稅負所得稅</b>，受益人不論幾個申報戶，保險金全額都不計入個人基本所得額。</p></div>
+    <div class="pth free"><h3>路徑二　免遺產稅</h3><div class="tagline">改進最低稅負制</div><p>保險金不課遺產稅，但要納入最低稅負制。每一申報戶有 <b>3,740 萬</b>保險給付免稅門檻，超過部分計入基本所得額，再扣 <b>670 萬</b>後 ×20%。</p></div>
+  </div>
+</div></section>
+<section class="sec" id="s6"><div class="shell">
+  <div class="sec-head reveal"><div class="sec-no">柒</div><div><div class="sec-title">最低稅負與申報戶</div><div class="sec-sub">免遺產稅情境下，受益人分屬越多申報戶，免稅額可重複使用、最低稅負越低。</div></div></div>
+  <div class="hh reveal" id="p6hh"></div><div class="takeaways reveal" id="p6take"></div>
+</div></section>
+<section class="sec" id="s7"><div class="shell">
+  <div class="sec-head reveal"><div class="sec-no">捌</div><div><div class="sec-title">一般所得稅 vs 最低稅負（取高者）</div><div class="sec-sub">免遺產稅情境下，最低稅負基本所得額須併計受益人一般所得。採114年度累進稅率。</div></div></div>
+  <div class="reveal tblscroll" id="p7table"></div><div class="takeaways reveal" id="p7take"></div>
+</div></section>
+
+<footer class="foot"><div class="shell">
+  <div class="brand">Rex 大叔的 168 台股投資教室</div>
+  本總覽為資料整理試算，非投資、保險或稅務建議。宣告利率 4.30% 為假設、非保證。遺產稅以簡化 20% 計，最低稅負採每申報戶 3,740 萬保險免計入門檻與 670 萬基本免稅額 ×20%、114年度(2025年所得)綜所稅累進稅率，均未計各項免稅額扣除額細節，並假設保險金平均分配且一般所得直接當綜合所得淨額。最低稅負實務須與一般所得稅額比較取高者、差額補繳。保險金免稅與否依國稅局實質課稅原則個案認定；融資借款須償還本金與利息並承擔升息風險。免稅額與稅率依現行規定、未來可能調整。實際規劃與計算請諮詢專業會計師或稅務師。匯率固定 USD/TWD=30 換算僅供參考。
+</div></footer>
+
+<script>
+const DATA={"f50": {"label": "女性 50 歲", "gender": "女性", "age": 50, "prem": 836916, "init": 697230, "loan": 557784, "own": 279132, "yr_int": 14502, "own_pct": 33.4, "loan_pct": 66.6, "death1": 3019454, "death_twd": 90583620, "ins_over": 53183620, "lev_no": 3.61, "lev_net": 8.82, "lev_tax": 7.06, "amp": 2.4, "magnify": 3.61, "tax_amt": 492334, "heir": 1969336, "cov": [{"y": 4, "csv": 858494, "profit": 21578, "interest": 58008, "net": -36430, "coverage": 37}, {"y": 6, "csv": 943225, "profit": 106309, "interest": 87012, "net": 19297, "coverage": 122}, {"y": 10, "csv": 1103863, "profit": 266947, "interest": 145020, "net": 121927, "coverage": 184}, {"y": 15, "csv": 1322161, "profit": 485245, "interest": 217530, "net": 267715, "coverage": 223}, {"y": 20, "csv": 1568240, "profit": 731324, "interest": 290040, "net": 441284, "coverage": 252}, {"y": 25, "csv": 1835678, "profit": 998762, "interest": 362550, "net": 636212, "coverage": 275}, {"y": 30, "csv": 2120143, "profit": 1283227, "interest": 435060, "net": 848167, "coverage": 295}, {"y": 35, "csv": 2407669, "profit": 1570753, "interest": 507570, "net": 1063183, "coverage": 309}, {"y": 40, "csv": 2685959, "profit": 1849043, "interest": 580080, "net": 1268963, "coverage": 319}], "levyears": [{"y": 1, "death": 3019454, "no": 3.61, "net": 8.82, "tax": 7.06}, {"y": 4, "death": 3046735, "no": 3.64, "net": 8.92, "tax": 7.13}, {"y": 6, "death": 3065302, "no": 3.66, "net": 8.98, "tax": 7.19}, {"y": 10, "death": 3103407, "no": 3.71, "net": 9.12, "tax": 7.3}, {"y": 15, "death": 3151985, "no": 3.77, "net": 9.29, "tax": 7.44}, {"y": 20, "death": 3202341, "no": 3.83, "net": 9.47, "tax": 7.58}, {"y": 25, "death": 3254294, "no": 3.89, "net": 9.66, "tax": 7.73}, {"y": 30, "death": 3308099, "no": 3.95, "net": 9.85, "tax": 7.88}, {"y": 35, "death": 3363424, "no": 4.02, "net": 10.05, "tax": 8.04}, {"y": 40, "death": 3419935, "no": 4.09, "net": 10.25, "tax": 8.2}], "hh": [{"n": 1, "per": 90583620, "tax": 9296724}, {"n": 2, "per": 45291810, "tax": 476724}, {"n": 3, "per": 30194540, "tax": 0}], "taxcmp": [{"inc": 1000000, "reg": 78700, "base": 9496724, "higher": 9496724, "extra": 9418024}, {"inc": 3000000, "reg": 486300, "base": 9896724, "higher": 9896724, "extra": 9410424}, {"inc": 5000000, "reg": 1088300, "base": 10296724, "higher": 10296724, "extra": 9208424}, {"inc": 10000000, "reg": 3088300, "base": 11296724, "higher": 11296724, "extra": 8208424}]}, "m50": {"label": "男性 50 歲", "gender": "男性", "age": 50, "prem": 1011225, "init": 853527, "loan": 682822, "own": 328403, "yr_int": 17753, "own_pct": 32.5, "loan_pct": 67.5, "death1": 3023772, "death_twd": 90713160, "ins_over": 53313160, "lev_no": 2.99, "lev_net": 7.13, "lev_tax": 5.7, "amp": 2.4, "magnify": 2.99, "tax_amt": 468190, "heir": 1872760, "cov": [{"y": 4, "csv": 1035866, "profit": 24641, "interest": 71012, "net": -46371, "coverage": 35}, {"y": 6, "csv": 1129340, "profit": 118115, "interest": 106518, "net": 11597, "coverage": 111}, {"y": 10, "csv": 1300374, "profit": 289149, "interest": 177530, "net": 111619, "coverage": 163}, {"y": 15, "csv": 1524318, "profit": 513093, "interest": 266295, "net": 246798, "coverage": 193}, {"y": 20, "csv": 1769294, "profit": 758069, "interest": 355060, "net": 403009, "coverage": 214}, {"y": 25, "csv": 2021810, "profit": 1010585, "interest": 443825, "net": 566760, "coverage": 228}, {"y": 30, "csv": 2281068, "profit": 1269843, "interest": 532590, "net": 737253, "coverage": 238}, {"y": 35, "csv": 2538925, "profit": 1527700, "interest": 621355, "net": 906345, "coverage": 246}, {"y": 40, "csv": 2795340, "profit": 1784115, "interest": 710120, "net": 1073995, "coverage": 251}], "levyears": [{"y": 1, "death": 3023772, "no": 2.99, "net": 7.13, "tax": 5.7}, {"y": 4, "death": 3051691, "no": 3.02, "net": 7.21, "tax": 5.77}, {"y": 6, "death": 3070689, "no": 3.04, "net": 7.27, "tax": 5.82}, {"y": 10, "death": 3109644, "no": 3.08, "net": 7.39, "tax": 5.91}, {"y": 15, "death": 3159230, "no": 3.12, "net": 7.54, "tax": 6.03}, {"y": 20, "death": 3210463, "no": 3.17, "net": 7.7, "tax": 6.16}, {"y": 25, "death": 3263075, "no": 3.23, "net": 7.86, "tax": 6.29}, {"y": 30, "death": 3317298, "no": 3.28, "net": 8.02, "tax": 6.42}, {"y": 35, "death": 3372827, "no": 3.34, "net": 8.19, "tax": 6.55}, {"y": 40, "death": 3429475, "no": 3.39, "net": 8.36, "tax": 6.69}], "hh": [{"n": 1, "per": 90713160, "tax": 9322632}, {"n": 2, "per": 45356580, "tax": 502632}, {"n": 3, "per": 30237720, "tax": 0}], "taxcmp": [{"inc": 1000000, "reg": 78700, "base": 9522632, "higher": 9522632, "extra": 9443932}, {"inc": 3000000, "reg": 486300, "base": 9922632, "higher": 9922632, "extra": 9436332}, {"inc": 5000000, "reg": 1088300, "base": 10322632, "higher": 10322632, "extra": 9234332}, {"inc": 10000000, "reg": 3088300, "base": 11322632, "higher": 11322632, "extra": 8234332}]}, "f45": {"label": "女性 45 歲", "gender": "女性", "age": 45, "prem": 701601, "init": 583398, "loan": 466718, "own": 234883, "yr_int": 12135, "own_pct": 33.5, "loan_pct": 66.5, "death1": 3016281, "death_twd": 90488430, "ins_over": 53088430, "lev_no": 4.3, "lev_net": 10.85, "lev_tax": 8.68, "amp": 2.5, "magnify": 4.3, "tax_amt": 509913, "heir": 2039650, "cov": [{"y": 4, "csv": 719491, "profit": 17890, "interest": 48540, "net": -30650, "coverage": 37}, {"y": 6, "csv": 791408, "profit": 89807, "interest": 72810, "net": 16997, "coverage": 123}, {"y": 10, "csv": 929175, "profit": 227574, "interest": 121350, "net": 106224, "coverage": 188}, {"y": 15, "csv": 1119165, "profit": 417564, "interest": 182025, "net": 235539, "coverage": 229}, {"y": 20, "csv": 1340483, "profit": 638882, "interest": 242700, "net": 396182, "coverage": 263}, {"y": 25, "csv": 1589958, "profit": 888357, "interest": 303375, "net": 584982, "coverage": 293}, {"y": 30, "csv": 1861080, "profit": 1159479, "interest": 364050, "net": 795429, "coverage": 318}, {"y": 35, "csv": 2149437, "profit": 1447836, "interest": 424725, "net": 1023111, "coverage": 341}, {"y": 40, "csv": 2440841, "profit": 1739240, "interest": 485400, "net": 1253840, "coverage": 358}], "levyears": [{"y": 1, "death": 3016281, "no": 4.3, "net": 10.85, "tax": 8.68}, {"y": 4, "death": 3043154, "no": 4.34, "net": 10.97, "tax": 8.78}, {"y": 6, "death": 3061434, "no": 4.36, "net": 11.05, "tax": 8.84}, {"y": 10, "death": 3098883, "no": 4.42, "net": 11.21, "tax": 8.97}, {"y": 15, "death": 3146548, "no": 4.48, "net": 11.41, "tax": 9.13}, {"y": 20, "death": 3195913, "no": 4.56, "net": 11.62, "tax": 9.3}, {"y": 25, "death": 3246880, "no": 4.63, "net": 11.84, "tax": 9.47}, {"y": 30, "death": 3299770, "no": 4.7, "net": 12.06, "tax": 9.65}, {"y": 35, "death": 3354375, "no": 4.78, "net": 12.29, "tax": 9.84}, {"y": 40, "death": 3410406, "no": 4.86, "net": 12.53, "tax": 10.03}], "hh": [{"n": 1, "per": 90488430, "tax": 9277686}, {"n": 2, "per": 45244215, "tax": 457686}, {"n": 3, "per": 30162810, "tax": 0}], "taxcmp": [{"inc": 1000000, "reg": 78700, "base": 9477686, "higher": 9477686, "extra": 9398986}, {"inc": 3000000, "reg": 486300, "base": 9877686, "higher": 9877686, "extra": 9391386}, {"inc": 5000000, "reg": 1088300, "base": 10277686, "higher": 10277686, "extra": 9189386}, {"inc": 10000000, "reg": 3088300, "base": 11277686, "higher": 11277686, "extra": 8189386}]}, "m45": {"label": "男性 45 歲", "gender": "男性", "age": 45, "prem": 861942, "init": 724758, "loan": 579806, "own": 282136, "yr_int": 15075, "own_pct": 32.7, "loan_pct": 67.3, "death1": 3020195, "death_twd": 90605850, "ins_over": 53205850, "lev_no": 3.5, "lev_net": 8.65, "lev_tax": 6.92, "amp": 2.5, "magnify": 3.5, "tax_amt": 488078, "heir": 1952311, "cov": [{"y": 4, "csv": 882763, "profit": 20821, "interest": 60300, "net": -39479, "coverage": 35}, {"y": 6, "csv": 964360, "profit": 102418, "interest": 90450, "net": 11968, "coverage": 113}, {"y": 10, "csv": 1115487, "profit": 253545, "interest": 150750, "net": 102795, "coverage": 168}, {"y": 15, "csv": 1316659, "profit": 454717, "interest": 226125, "net": 228592, "coverage": 201}, {"y": 20, "csv": 1543167, "profit": 681225, "interest": 301500, "net": 379725, "coverage": 226}, {"y": 25, "csv": 1790729, "profit": 928787, "interest": 376875, "net": 551912, "coverage": 246}, {"y": 30, "csv": 2045435, "profit": 1183493, "interest": 452250, "net": 731243, "coverage": 262}, {"y": 35, "csv": 2306010, "profit": 1444068, "interest": 527625, "net": 916443, "coverage": 274}, {"y": 40, "csv": 2562869, "profit": 1700927, "interest": 603000, "net": 1097927, "coverage": 282}], "levyears": [{"y": 1, "death": 3020195, "no": 3.5, "net": 8.65, "tax": 6.92}, {"y": 4, "death": 3047682, "no": 3.54, "net": 8.75, "tax": 7.0}, {"y": 6, "death": 3066385, "no": 3.56, "net": 8.81, "tax": 7.05}, {"y": 10, "death": 3104701, "no": 3.6, "net": 8.95, "tax": 7.16}, {"y": 15, "death": 3153451, "no": 3.66, "net": 9.12, "tax": 7.3}, {"y": 20, "death": 3203839, "no": 3.72, "net": 9.3, "tax": 7.44}, {"y": 25, "death": 3255694, "no": 3.78, "net": 9.48, "tax": 7.59}, {"y": 30, "death": 3309246, "no": 3.84, "net": 9.67, "tax": 7.74}, {"y": 35, "death": 3364258, "no": 3.9, "net": 9.87, "tax": 7.9}, {"y": 40, "death": 3420455, "no": 3.97, "net": 10.07, "tax": 8.05}], "hh": [{"n": 1, "per": 90605850, "tax": 9301170}, {"n": 2, "per": 45302925, "tax": 481170}, {"n": 3, "per": 30201950, "tax": 0}], "taxcmp": [{"inc": 1000000, "reg": 78700, "base": 9501170, "higher": 9501170, "extra": 9422470}, {"inc": 3000000, "reg": 486300, "base": 9901170, "higher": 9901170, "extra": 9414870}, {"inc": 5000000, "reg": 1088300, "base": 10301170, "higher": 10301170, "extra": 9212870}, {"inc": 10000000, "reg": 3088300, "base": 11301170, "higher": 11301170, "extra": 8212870}]}, "f55": {"label": "女性 55 歲", "gender": "女性", "age": 55, "prem": 998130, "init": 831921, "loan": 665537, "own": 332593, "yr_int": 17304, "own_pct": 33.3, "loan_pct": 66.7, "death1": 3023202, "death_twd": 90696060, "ins_over": 53296060, "lev_no": 3.03, "lev_net": 7.09, "lev_tax": 5.67, "amp": 2.3, "magnify": 3.03, "tax_amt": 471533, "heir": 1886132, "cov": [{"y": 4, "csv": 1021163, "profit": 23033, "interest": 69216, "net": -46183, "coverage": 33}, {"y": 6, "csv": 1119920, "profit": 121790, "interest": 103824, "net": 17966, "coverage": 117}, {"y": 10, "csv": 1304607, "profit": 306477, "interest": 173040, "net": 133437, "coverage": 177}, {"y": 15, "csv": 1547477, "profit": 549347, "interest": 259560, "net": 289787, "coverage": 212}, {"y": 20, "csv": 1811495, "profit": 813365, "interest": 346080, "net": 467285, "coverage": 235}, {"y": 25, "csv": 2092452, "profit": 1094322, "interest": 432600, "net": 661722, "coverage": 253}, {"y": 30, "csv": 2376758, "profit": 1378628, "interest": 519120, "net": 859508, "coverage": 266}, {"y": 35, "csv": 2652824, "profit": 1654694, "interest": 605640, "net": 1049054, "coverage": 273}, {"y": 40, "csv": 2906487, "profit": 1908357, "interest": 692160, "net": 1216197, "coverage": 276}], "levyears": [{"y": 1, "death": 3023202, "no": 3.03, "net": 7.09, "tax": 5.67}, {"y": 4, "death": 3050963, "no": 3.06, "net": 7.17, "tax": 5.74}, {"y": 6, "death": 3069870, "no": 3.08, "net": 7.23, "tax": 5.78}, {"y": 10, "death": 3108705, "no": 3.11, "net": 7.35, "tax": 5.88}, {"y": 15, "death": 3158262, "no": 3.16, "net": 7.49, "tax": 6.0}, {"y": 20, "death": 3209592, "no": 3.22, "net": 7.65, "tax": 6.12}, {"y": 25, "death": 3262451, "no": 3.27, "net": 7.81, "tax": 6.25}, {"y": 30, "death": 3316974, "no": 3.32, "net": 7.97, "tax": 6.38}, {"y": 35, "death": 3372789, "no": 3.38, "net": 8.14, "tax": 6.51}, {"y": 40, "death": 3429524, "no": 3.44, "net": 8.31, "tax": 6.65}], "hh": [{"n": 1, "per": 90696060, "tax": 9319212}, {"n": 2, "per": 45348030, "tax": 499212}, {"n": 3, "per": 30232020, "tax": 0}], "taxcmp": [{"inc": 1000000, "reg": 78700, "base": 9519212, "higher": 9519212, "extra": 9440512}, {"inc": 3000000, "reg": 486300, "base": 9919212, "higher": 9919212, "extra": 9432912}, {"inc": 5000000, "reg": 1088300, "base": 10319212, "higher": 10319212, "extra": 9230912}, {"inc": 10000000, "reg": 3088300, "base": 11319212, "higher": 11319212, "extra": 8230912}]}, "m55": {"label": "男性 55 歲", "gender": "男性", "age": 55, "prem": 1187862, "init": 1001979, "loan": 801583, "own": 386279, "yr_int": 20841, "own_pct": 32.5, "loan_pct": 67.5, "death1": 3027891, "death_twd": 90836730, "ins_over": 53436730, "lev_no": 2.55, "lev_net": 5.76, "lev_tax": 4.61, "amp": 2.3, "magnify": 2.55, "tax_amt": 445262, "heir": 1781046, "cov": [{"y": 4, "csv": 1210608, "profit": 22746, "interest": 83364, "net": -60618, "coverage": 27}, {"y": 6, "csv": 1316696, "profit": 128834, "interest": 125046, "net": 3788, "coverage": 103}, {"y": 10, "csv": 1507848, "profit": 319986, "interest": 208410, "net": 111576, "coverage": 154}, {"y": 15, "csv": 1750956, "profit": 563094, "interest": 312615, "net": 250479, "coverage": 180}, {"y": 20, "csv": 2002402, "profit": 814540, "interest": 416820, "net": 397720, "coverage": 195}, {"y": 25, "csv": 2262236, "profit": 1074374, "interest": 521025, "net": 553349, "coverage": 206}, {"y": 30, "csv": 2524783, "profit": 1336921, "interest": 625230, "net": 711691, "coverage": 214}, {"y": 35, "csv": 2797319, "profit": 1609457, "interest": 729435, "net": 880022, "coverage": 221}, {"y": 40, "csv": 3131661, "profit": 1943799, "interest": 833640, "net": 1110159, "coverage": 233}], "levyears": [{"y": 1, "death": 3027891, "no": 2.55, "net": 5.76, "tax": 4.61}, {"y": 4, "death": 3056281, "no": 2.57, "net": 5.84, "tax": 4.67}, {"y": 6, "death": 3075601, "no": 2.59, "net": 5.89, "tax": 4.71}, {"y": 10, "death": 3115228, "no": 2.62, "net": 5.99, "tax": 4.79}, {"y": 15, "death": 3165657, "no": 2.67, "net": 6.12, "tax": 4.9}, {"y": 20, "death": 3217653, "no": 2.71, "net": 6.25, "tax": 5.0}, {"y": 25, "death": 3270956, "no": 2.75, "net": 6.39, "tax": 5.11}, {"y": 30, "death": 3325755, "no": 2.8, "net": 6.53, "tax": 5.23}, {"y": 35, "death": 3381904, "no": 2.85, "net": 6.68, "tax": 5.34}, {"y": 40, "death": 3439861, "no": 2.9, "net": 6.83, "tax": 5.46}], "hh": [{"n": 1, "per": 90836730, "tax": 9347346}, {"n": 2, "per": 45418365, "tax": 527346}, {"n": 3, "per": 30278910, "tax": 0}], "taxcmp": [{"inc": 1000000, "reg": 78700, "base": 9547346, "higher": 9547346, "extra": 9468646}, {"inc": 3000000, "reg": 486300, "base": 9947346, "higher": 9947346, "extra": 9461046}, {"inc": 5000000, "reg": 1088300, "base": 10347346, "higher": 10347346, "extra": 9259046}, {"inc": 10000000, "reg": 3088300, "base": 11347346, "higher": 11347346, "extra": 8259046}]}, "f60": {"label": "女性 60 歲", "gender": "女性", "age": 60, "prem": 1184661, "init": 989718, "loan": 791774, "own": 392887, "yr_int": 20586, "own_pct": 33.2, "loan_pct": 66.8, "death1": 3027590, "death_twd": 90827700, "ins_over": 53427700, "lev_no": 2.56, "lev_net": 5.69, "lev_tax": 4.55, "amp": 2.2, "magnify": 2.56, "tax_amt": 447163, "heir": 1788653, "cov": [{"y": 4, "csv": 1209740, "profit": 25079, "interest": 82344, "net": -57265, "coverage": 30}, {"y": 6, "csv": 1322856, "profit": 138195, "interest": 123516, "net": 14679, "coverage": 112}, {"y": 10, "csv": 1528748, "profit": 344087, "interest": 205860, "net": 138227, "coverage": 167}, {"y": 15, "csv": 1789951, "profit": 605290, "interest": 308790, "net": 296500, "coverage": 196}, {"y": 20, "csv": 2068330, "profit": 883669, "interest": 411720, "net": 471949, "coverage": 215}, {"y": 25, "csv": 2351033, "profit": 1166372, "interest": 514650, "net": 651722, "coverage": 227}, {"y": 30, "csv": 2628322, "profit": 1443661, "interest": 617580, "net": 826081, "coverage": 234}, {"y": 35, "csv": 2893111, "profit": 1708450, "interest": 720510, "net": 987940, "coverage": 237}, {"y": 40, "csv": 3193205, "profit": 2008544, "interest": 823440, "net": 1185104, "coverage": 244}], "levyears": [{"y": 1, "death": 3027590, "no": 2.56, "net": 5.69, "tax": 4.55}, {"y": 4, "death": 3055887, "no": 2.58, "net": 5.76, "tax": 4.61}, {"y": 6, "death": 3075167, "no": 2.6, "net": 5.81, "tax": 4.65}, {"y": 10, "death": 3114786, "no": 2.63, "net": 5.91, "tax": 4.73}, {"y": 15, "death": 3165311, "no": 2.67, "net": 6.04, "tax": 4.83}, {"y": 20, "death": 3217546, "no": 2.72, "net": 6.17, "tax": 4.94}, {"y": 25, "death": 3271134, "no": 2.76, "net": 6.31, "tax": 5.05}, {"y": 30, "death": 3326189, "no": 2.81, "net": 6.45, "tax": 5.16}, {"y": 35, "death": 3382376, "no": 2.86, "net": 6.59, "tax": 5.28}, {"y": 40, "death": 3440054, "no": 2.9, "net": 6.74, "tax": 5.39}], "hh": [{"n": 1, "per": 90827700, "tax": 9345540}, {"n": 2, "per": 45413850, "tax": 525540}, {"n": 3, "per": 30275900, "tax": 0}], "taxcmp": [{"inc": 1000000, "reg": 78700, "base": 9545540, "higher": 9545540, "extra": 9466840}, {"inc": 3000000, "reg": 486300, "base": 9945540, "higher": 9945540, "extra": 9459240}, {"inc": 5000000, "reg": 1088300, "base": 10345540, "higher": 10345540, "extra": 9257240}, {"inc": 10000000, "reg": 3088300, "base": 11345540, "higher": 11345540, "extra": 8257240}]}, "m60": {"label": "男性 60 歲", "gender": "男性", "age": 60, "prem": 1387779, "init": 1171329, "loan": 937063, "own": 450716, "yr_int": 24364, "own_pct": 32.5, "loan_pct": 67.5, "death1": 3032584, "death_twd": 90977520, "ins_over": 53577520, "lev_no": 2.19, "lev_net": 4.65, "lev_tax": 3.72, "amp": 2.1, "magnify": 2.19, "tax_amt": 419104, "heir": 1676417, "cov": [{"y": 4, "csv": 1408003, "profit": 20224, "interest": 97456, "net": -77232, "coverage": 21}, {"y": 6, "csv": 1526947, "profit": 139168, "interest": 146184, "net": -7016, "coverage": 95}, {"y": 10, "csv": 1735416, "profit": 347637, "interest": 243640, "net": 103997, "coverage": 143}, {"y": 15, "csv": 1986786, "profit": 599007, "interest": 365460, "net": 233547, "coverage": 164}, {"y": 20, "csv": 2248926, "profit": 861147, "interest": 487280, "net": 373867, "coverage": 177}, {"y": 25, "csv": 2519492, "profit": 1131713, "interest": 609100, "net": 522613, "coverage": 186}, {"y": 30, "csv": 2815988, "profit": 1428209, "interest": 730920, "net": 697289, "coverage": 195}, {"y": 35, "csv": 3222434, "profit": 1834655, "interest": 852740, "net": 981915, "coverage": 215}, {"y": 40, "csv": 3732948, "profit": 2345169, "interest": 974560, "net": 1370609, "coverage": 241}], "levyears": [{"y": 1, "death": 3032584, "no": 2.19, "net": 4.65, "tax": 3.72}, {"y": 4, "death": 3061474, "no": 2.21, "net": 4.71, "tax": 3.77}, {"y": 6, "death": 3081132, "no": 2.22, "net": 4.76, "tax": 3.81}, {"y": 10, "death": 3121432, "no": 2.25, "net": 4.85, "tax": 3.88}, {"y": 15, "death": 3172633, "no": 2.29, "net": 4.96, "tax": 3.97}, {"y": 20, "death": 3225348, "no": 2.32, "net": 5.08, "tax": 4.06}, {"y": 25, "death": 3279304, "no": 2.36, "net": 5.2, "tax": 4.16}, {"y": 30, "death": 3334947, "no": 2.4, "net": 5.32, "tax": 4.26}, {"y": 35, "death": 3446063, "no": 2.48, "net": 5.57, "tax": 4.45}, {"y": 40, "death": 3909345, "no": 2.82, "net": 6.59, "tax": 5.28}], "hh": [{"n": 1, "per": 90977520, "tax": 9375504}, {"n": 2, "per": 45488760, "tax": 555504}, {"n": 3, "per": 30325840, "tax": 0}], "taxcmp": [{"inc": 1000000, "reg": 78700, "base": 9575504, "higher": 9575504, "extra": 9496804}, {"inc": 3000000, "reg": 486300, "base": 9975504, "higher": 9975504, "extra": 9489204}, {"inc": 5000000, "reg": 1088300, "base": 10375504, "higher": 10375504, "extra": 9287204}, {"inc": 10000000, "reg": 3088300, "base": 11375504, "higher": 11375504, "extra": 8287204}]}, "f65": {"label": "女性 65 歲", "gender": "女性", "age": 65, "prem": 1404948, "init": 1173612, "loan": 938890, "own": 466058, "yr_int": 24411, "own_pct": 33.2, "loan_pct": 66.8, "death1": 3032690, "death_twd": 90980700, "ins_over": 53580700, "lev_no": 2.16, "lev_net": 4.49, "lev_tax": 3.59, "amp": 2.1, "magnify": 2.16, "tax_amt": 418760, "heir": 1675040, "cov": [{"y": 4, "csv": 1424196, "profit": 19248, "interest": 97644, "net": -78396, "coverage": 20}, {"y": 6, "csv": 1550577, "profit": 145629, "interest": 146466, "net": -837, "coverage": 99}, {"y": 10, "csv": 1773323, "profit": 368375, "interest": 244110, "net": 124265, "coverage": 151}, {"y": 15, "csv": 2050887, "profit": 645939, "interest": 366165, "net": 279774, "coverage": 176}, {"y": 20, "csv": 2335148, "profit": 930200, "interest": 488220, "net": 441980, "coverage": 191}, {"y": 25, "csv": 2620423, "profit": 1215475, "interest": 610275, "net": 605200, "coverage": 199}, {"y": 30, "csv": 2915865, "profit": 1510917, "interest": 732330, "net": 778587, "coverage": 206}, {"y": 35, "csv": 3331404, "profit": 1926456, "interest": 854385, "net": 1072071, "coverage": 225}, {"y": 40, "csv": 3847062, "profit": 2442114, "interest": 976440, "net": 1465674, "coverage": 250}], "levyears": [{"y": 1, "death": 3032690, "no": 2.16, "net": 4.49, "tax": 3.59}, {"y": 4, "death": 3061571, "no": 2.18, "net": 4.55, "tax": 3.64}, {"y": 6, "death": 3081249, "no": 2.19, "net": 4.6, "tax": 3.68}, {"y": 10, "death": 3121640, "no": 2.22, "net": 4.68, "tax": 3.75}, {"y": 15, "death": 3173085, "no": 2.26, "net": 4.79, "tax": 3.84}, {"y": 20, "death": 3226087, "no": 2.3, "net": 4.91, "tax": 3.93}, {"y": 25, "death": 3280311, "no": 2.33, "net": 5.02, "tax": 4.02}, {"y": 30, "death": 3336082, "no": 2.37, "net": 5.14, "tax": 4.11}, {"y": 35, "death": 3489075, "no": 2.48, "net": 5.47, "tax": 4.38}, {"y": 40, "death": 3958033, "no": 2.82, "net": 6.48, "tax": 5.18}], "hh": [{"n": 1, "per": 90980700, "tax": 9376140}, {"n": 2, "per": 45490350, "tax": 556140}, {"n": 3, "per": 30326900, "tax": 0}], "taxcmp": [{"inc": 1000000, "reg": 78700, "base": 9576140, "higher": 9576140, "extra": 9497440}, {"inc": 3000000, "reg": 486300, "base": 9976140, "higher": 9976140, "extra": 9489840}, {"inc": 5000000, "reg": 1088300, "base": 10376140, "higher": 10376140, "extra": 9287840}, {"inc": 10000000, "reg": 3088300, "base": 11376140, "higher": 11376140, "extra": 8287840}]}, "m65": {"label": "男性 65 歲", "gender": "男性", "age": 65, "prem": 1613886, "init": 1362642, "loan": 1090114, "own": 523772, "yr_int": 28343, "own_pct": 32.5, "loan_pct": 67.5, "death1": 3037879, "death_twd": 91136370, "ins_over": 53736370, "lev_no": 1.88, "lev_net": 3.72, "lev_tax": 2.97, "amp": 2.0, "magnify": 1.88, "tax_amt": 389553, "heir": 1558212, "cov": [{"y": 4, "csv": 1627185, "profit": 13299, "interest": 113372, "net": -100073, "coverage": 12}, {"y": 6, "csv": 1756484, "profit": 142598, "interest": 170058, "net": -27460, "coverage": 84}, {"y": 10, "csv": 1974649, "profit": 360763, "interest": 283430, "net": 77333, "coverage": 127}, {"y": 15, "csv": 2240617, "profit": 626731, "interest": 425145, "net": 201586, "coverage": 147}, {"y": 20, "csv": 2522238, "profit": 908352, "interest": 566860, "net": 341492, "coverage": 160}, {"y": 25, "csv": 2849815, "profit": 1235929, "interest": 708575, "net": 527354, "coverage": 174}, {"y": 30, "csv": 3304148, "profit": 1690262, "interest": 850290, "net": 839972, "coverage": 199}, {"y": 35, "csv": 3827608, "profit": 2213722, "interest": 992005, "net": 1221717, "coverage": 223}, {"y": 40, "csv": 4412079, "profit": 2798193, "interest": 1133720, "net": 1664473, "coverage": 247}], "levyears": [{"y": 1, "death": 3037879, "no": 1.88, "net": 3.72, "tax": 2.97}, {"y": 4, "death": 3067275, "no": 1.9, "net": 3.77, "tax": 3.02}, {"y": 6, "death": 3087260, "no": 1.91, "net": 3.81, "tax": 3.05}, {"y": 10, "death": 3128184, "no": 1.94, "net": 3.89, "tax": 3.11}, {"y": 15, "death": 3180139, "no": 1.97, "net": 3.99, "tax": 3.19}, {"y": 20, "death": 3233601, "no": 2.0, "net": 4.09, "tax": 3.27}, {"y": 25, "death": 3288684, "no": 2.04, "net": 4.2, "tax": 3.36}, {"y": 30, "death": 3533449, "no": 2.19, "net": 4.66, "tax": 3.73}, {"y": 35, "death": 4008478, "no": 2.48, "net": 5.57, "tax": 4.46}, {"y": 40, "death": 4547152, "no": 2.82, "net": 6.6, "tax": 5.28}], "hh": [{"n": 1, "per": 91136370, "tax": 9407274}, {"n": 2, "per": 45568185, "tax": 587274}, {"n": 3, "per": 30378790, "tax": 0}], "taxcmp": [{"inc": 1000000, "reg": 78700, "base": 9607274, "higher": 9607274, "extra": 9528574}, {"inc": 3000000, "reg": 486300, "base": 10007274, "higher": 10007274, "extra": 9520974}, {"inc": 5000000, "reg": 1088300, "base": 10407274, "higher": 10407274, "extra": 9318974}, {"inc": 10000000, "reg": 3088300, "base": 11407274, "higher": 11407274, "extra": 8318974}]}};
+const fmt=n=>Math.round(n).toLocaleString();
+// 美元→台幣(萬)，回傳如「279,132（約台幣 837 萬）」
+const FXR=30;
+function usd(n){
+  const tw=Math.round(n*FXR/10000); // 台幣萬
+  return fmt(n)+'（約台幣 '+fmt(tw)+' 萬）';
+}
+let cur='f50';
+function render(k){
+  const d=DATA[k];
+  document.getElementById('heroCase').innerHTML=
+    '<div><div class="n">投保條件</div><div class="v">'+d.label+'</div></div>'+
+    '<div><div class="n">基本保額</div><div class="v">300 <small>萬美元</small></div></div>'+
+    '<div><div class="n">躉繳保費</div><div class="v">'+fmt(d.prem)+' <small>美元</small></div><div class="twd" style="font-size:14px">約台幣 '+fmt(Math.round(d.prem*30/10000))+' 萬</div></div>'+
+    '<div><div class="n">自備比例</div><div class="v">'+d.own_pct+' <small>%</small></div></div>';
+  document.getElementById('p1body').innerHTML=
+    '<div style="font-size:14px;color:var(--ink-soft);margin-bottom:6px">躉繳保費總額　'+fmt(d.prem)+' 美元（台幣 '+fmt(d.prem*30)+'）</div>'+
+    '<div class="fundbar"><div class="seg own" data-w="'+d.own_pct+'"><span class="lab">自備款</span><span class="pct">'+d.own_pct+'%</span></div>'+
+    '<div class="seg loan" data-w="'+d.loan_pct+'"><span class="lab">融資借款</span><span class="pct">'+d.loan_pct+'%</span></div></div>'+
+    '<div class="dualcard"><div class="dc o"><div class="n">自備款 · 自己出</div><div class="v">'+fmt(d.own)+' <small style="font-size:13px;color:var(--gold-d)">美元</small></div><div class="twd">約台幣 '+fmt(Math.round(d.own*30/10000))+' 萬</div><div class="s">佔總保費 '+d.own_pct+'%　實際自付現金</div></div>'+
+    '<div class="dc l"><div class="n">融資借款 · 向銀行借</div><div class="v">'+fmt(d.loan)+' <small style="font-size:13px;color:var(--gold-d)">美元</small></div><div class="twd">約台幣 '+fmt(Math.round(d.loan*30/10000))+' 萬</div><div class="s">佔總保費 '+d.loan_pct+'%　初解約金×80%</div></div></div>';
+  document.getElementById('p1take').innerHTML=
+    ti('一','自掏腰包只需 <b>'+usd(d.own)+' 美元</b>，約是全額保費的三分之一。')+
+    ti('二','其餘三分之二由融資借款支應，融資年利率假設 <b>2.6%</b>，每年利息 '+usd(d.yr_int)+' 美元。')+
+    ti('三','用三分之一自有資金，撬動完整的 <b>300 萬美元</b>保障——這是以小搏大的起點。');
+  const mx=Math.max(d.lev_net,10);
+  document.getElementById('p2bars').innerHTML=
+    levcol('lb1',d.lev_no,'未融資','自付全額保費',mx)+
+    levcol('lb2',d.lev_net,'融資後淨槓桿','(身故-融資)÷自備',mx)+
+    levcol('lb3',d.lev_tax,'實質課稅後','再扣 20% 遺產稅',mx);
+  document.getElementById('p2take').innerHTML=
+    ti('一','自付全額保費，保障槓桿 <b>'+d.lev_no+' 倍</b>。')+
+    ti('二','改用保費融資、只出三分之一自備款，淨槓桿拉高到 <b>'+d.lev_net+' 倍</b>（放大約 '+d.amp+' 倍）。')+
+    ti('三','即使保險金被實質課稅，槓桿仍有 <b>'+d.lev_tax+' 倍</b>，高於自付全額的 '+d.lev_no+' 倍。');
+  let lh='<table class="tbl"><thead><tr><th>保單年度</th>'+d.levyears.map(r=>'<th>第'+r.y+'年</th>').join('')+'</tr></thead><tbody>';
+  lh+='<tr><td class="rowh">身故保額(美元)</td>'+d.levyears.map(r=>'<td>'+fmt(r.death)+'</td>').join('')+'</tr>';
+  lh+='<tr><td class="rowh">未融資槓桿</td>'+d.levyears.map(r=>'<td>'+r.no.toFixed(2)+'x</td>').join('')+'</tr>';
+  lh+='<tr><td class="rowh">融資後淨槓桿</td>'+d.levyears.map(r=>'<td class="gold">'+r.net.toFixed(2)+'x</td>').join('')+'</tr>';
+  lh+='<tr><td class="rowh">實質課稅後淨槓桿</td>'+d.levyears.map(r=>'<td class="neg">'+r.tax.toFixed(2)+'x</td>').join('')+'</tr></tbody></table>';
+  document.getElementById('p2btable').innerHTML=lh;
+  document.getElementById('p3flow').innerHTML=
+    fstep('s1','① 躉繳當下',fmt(d.prem),'約台幣 '+fmt(Math.round(d.prem*30/10000))+' 萬')+'<div class="flowarrow">→</div>'+
+    fstep('s2','② 繼承·放大',fmt(d.death1),'約台幣 '+fmt(Math.round(d.death1*30/10000))+' 萬 · '+d.magnify+'倍')+'<div class="flowarrow">→</div>'+
+    fstep('s3','③ 還融資＋繳稅','還 '+fmt(d.loan)+'<br>＋稅 '+fmt(d.tax_amt),'保險金預留稅源')+'<div class="flowarrow">→</div>'+
+    fstep('s4','④ 繼承人實拿',fmt(d.heir),'約台幣 '+fmt(Math.round(d.heir*30/10000))+' 萬 · '+(d.heir/d.own).toFixed(1)+'倍');
+  document.getElementById('p3take').innerHTML=
+    ti('一','保費 '+usd(d.prem)+' 在繼承事實發生時放大為身故保額 <b>'+usd(d.death1)+'</b>（約 '+d.magnify+' 倍）。')+
+    ti('二','這筆放大的保險金，正可償還融資負債並支付遺產稅——保險的<b>預留稅源</b>功能。')+
+    ti('三','即使被實質課稅，扣除後繼承人仍實拿 <b>'+usd(d.heir)+'</b>，是自備款的 '+(d.heir/d.own).toFixed(1)+' 倍。');
+  let th='<table class="tbl"><thead><tr><th>保單年度</th>'+d.cov.map(r=>'<th>第'+r.y+'年</th>').join('')+'</tr></thead><tbody>';
+  th+='<tr><td class="rowh">解約金(美元)</td>'+d.cov.map(r=>'<td>'+fmt(r.csv)+'</td>').join('')+'</tr>';
+  th+='<tr><td class="rowh">保單損益</td>'+d.cov.map(r=>'<td class="'+(r.profit>=0?'pos':'neg')+'">'+fmt(r.profit)+'</td>').join('')+'</tr>';
+  th+='<tr><td class="rowh">累計利息</td>'+d.cov.map(r=>'<td class="neg">'+fmt(r.interest)+'</td>').join('')+'</tr>';
+  th+='<tr><td class="rowh">損益-利息</td>'+d.cov.map(r=>'<td class="'+(r.net>=0?'pos':'neg')+'">'+fmt(r.net)+'</td>').join('')+'</tr>';
+  th+='<tr><td class="rowh">覆蓋率</td>'+d.cov.map(r=>'<td class="'+(r.coverage>=100?'pos':'neg')+'">'+r.coverage+'%</td>').join('')+'</tr></tbody></table>';
+  document.getElementById('p4table').innerHTML=th;
+  const be=d.cov.find(r=>r.coverage>=100);
+  document.getElementById('p4take').innerHTML=
+    ti('一','每年利息 <b>'+usd(d.yr_int)+' 美元</b>（借款 '+fmt(d.loan)+' × 2.6%）。')+
+    ti('二','約於 <b>第 '+(be?be.y:'—')+' 年</b>保單損益跨過損益平衡（覆蓋率首次達 100%）。')+
+    ti('三','持有越久，覆蓋倍數越大；至第 '+d.cov[d.cov.length-1].y+' 年覆蓋率達 '+d.cov[d.cov.length-1].coverage+'%。');
+  document.getElementById('p6hh').innerHTML=d.hh.map((h,i)=>
+    '<div class="hcard h'+(i+1)+'"><div class="topline"></div><div class="n">'+h.n+' 個申報戶</div><div class="per">每戶分 '+fmt(h.per)+'</div><div class="v">'+fmt(h.tax)+'</div><div class="u">最低稅負（台幣）</div></div>').join('');
+  document.getElementById('p6take').innerHTML=
+    ti('一','身故保額台幣約 '+fmt(d.death_twd/10000)+' 萬，集中 1 個申報戶時最低稅負約 <b>'+fmt(d.hh[0].tax/10000)+' 萬</b>。')+
+    ti('二','分成 2 戶降為 '+fmt(d.hh[1].tax/10000)+' 萬；分成 3 戶（每戶低於 3,740 萬門檻）則為 <b>'+(d.hh[2].tax===0?'0':fmt(d.hh[2].tax/10000)+' 萬')+'</b>。')+
+    ti('三','受益人安排（申報戶配置）是最低稅負規劃的關鍵變數，分散得當可大幅降低甚至免除。');
+  let p7='<table class="tbl"><thead><tr><th>項目＼一般所得</th>'+d.taxcmp.map(r=>'<th>'+(r.inc/10000)+'萬</th>').join('')+'</tr></thead><tbody>';
+  p7+='<tr><td class="rowh">① 一般所得稅額</td>'+d.taxcmp.map(r=>'<td>'+fmt(r.reg)+'</td>').join('')+'</tr>';
+  p7+='<tr><td class="rowh">② 基本稅額(最低稅負)</td>'+d.taxcmp.map(r=>'<td class="gold">'+fmt(r.base)+'</td>').join('')+'</tr>';
+  p7+='<tr><td class="rowh">③ 取高者</td>'+d.taxcmp.map(r=>'<td class="pos">'+fmt(r.higher)+'</td>').join('')+'</tr>';
+  p7+='<tr><td class="rowh">④ 因保險金多繳</td>'+d.taxcmp.map(r=>'<td class="neg">'+fmt(r.extra)+'</td>').join('')+'</tr></tbody></table>';
+  document.getElementById('p7table').innerHTML=p7;
+  document.getElementById('p7take').innerHTML=
+    ti('一','一般所得稅與最低稅負<b>取高者</b>課徵；基本稅額超過一般稅額的差額才補繳。')+
+    ti('二','保險金超過 3,740 萬部分達 '+fmt(d.ins_over/10000)+' 萬，使基本稅額遠高於一般所得稅額。')+
+    ti('三','一般所得越高，原本一般稅額越大，因保險金「多繳」的差額反而縮小。');
+  requestAnimationFrame(()=>{document.querySelectorAll('.reveal').forEach(r=>r.classList.add('in'));growBars();});
+}
+function ti(m,t){return '<div class="ti"><span class="mk">'+m+'</span><span class="tx">'+t+'</span></div>';}
+function levcol(cls,val,lab,sub,mx){const h=Math.max(8,val/mx*100);return '<div class="levcol"><div class="levbar '+cls+'" data-h="'+h+'"><span class="x">'+val.toFixed(2)+'x</span></div><div class="levcap">'+lab+'<small>'+sub+'</small></div></div>';}
+function fstep(cls,tag,big,cap){return '<div class="fstep '+cls+'"><div class="tag">'+tag+'</div><div class="big">'+big+'</div><div class="cap">'+cap+'</div></div>';}
+function growBars(){setTimeout(()=>{document.querySelectorAll('.fundbar .seg').forEach(s=>s.style.width=s.dataset.w+'%');document.querySelectorAll('.levbar').forEach(b=>b.style.height=b.dataset.h+'%');},80);}
+function pick(k){if(k===cur)return;cur=k;
+  document.querySelectorAll('.seg-ctrl button').forEach(b=>b.classList.remove('on'));
+  var el=document.getElementById('btn-'+k); if(el) el.classList.add('on');
+  document.querySelectorAll('.fundbar .seg').forEach(s=>s.style.width='0');
+  document.querySelectorAll('.levbar').forEach(b=>b.style.height='0');
+  render(k);}
+const prog=document.getElementById('prog');
+addEventListener('scroll',()=>{const h=document.documentElement;prog.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';},{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');growBars();}}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(r=>io.observe(r));
+render('f50');
+</script>
+</body>
+</html>
