@@ -52,17 +52,19 @@ body{font-family:'Noto Sans TC',sans-serif;font-weight:500;
 /* HERO */
 .hero{padding-top:60px;padding-bottom:56px;position:relative;overflow:hidden;background:var(--paper);z-index:1}
 .eyebrow{font-size:13px;letter-spacing:.42em;color:var(--gold-deep);font-weight:700;text-indent:.42em;margin-bottom:30px}
-.hero h1.hero-title{position:relative;z-index:2;font-family:'Noto Serif TC',serif;font-weight:900;font-size:clamp(30px,5.6vw,56px);line-height:1.15;color:var(--ink);display:flex;flex-direction:column;gap:6px;margin-top:6px}
+.hero h1.hero-title{position:relative;z-index:2;font-family:'Noto Serif TC',serif;font-weight:900;font-size:clamp(30px,5.6vw,56px);line-height:1.15;color:var(--ink);display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;margin-top:6px}
 .hero-title .line{display:block}
 .hero-title .line-1{letter-spacing:.04em}
-.hero-title .line-2{letter-spacing:.04em;margin-left:clamp(20px,7vw,72px)}
-.hero-title .divider{width:64px;height:2px;background:linear-gradient(90deg,var(--gold),transparent);margin:16px 0 14px;border-radius:2px}
+.hero-title .line-2{letter-spacing:.04em}
+.hero-title .divider{width:64px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:16px auto 14px;border-radius:2px}
 .hero h1 .em{color:transparent;background:linear-gradient(100deg,var(--gold-deep),var(--gold),var(--gold-lite));-webkit-background-clip:text;background-clip:text}
 .hero .lede{margin-top:30px;max-width:540px;font-size:clamp(15px,2vw,17px);color:var(--ink-soft);font-weight:500;line-height:1.95}
-.hero .case{margin-top:36px;display:flex;gap:32px;flex-wrap:wrap;padding:22px 26px;background:var(--paper2);border:1px solid var(--cardline);border-radius:18px;box-shadow:0 16px 40px -28px rgba(80,60,20,.4)}
-.hero .case .n{font-size:12px;color:var(--ink-soft);letter-spacing:.05em}
-.hero .case .v{font-family:'Noto Serif TC',serif;font-size:25px;font-weight:700;margin-top:4px;color:var(--ink)}
-.hero .case .v small{font-size:13px;color:var(--gold-deep);font-weight:400;margin-left:3px}
+.hero .case{margin-top:36px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px 24px;padding:30px 28px;background:var(--paper2);border:1px solid var(--cardline);border-radius:18px;box-shadow:0 16px 40px -28px rgba(80,60,20,.4)}
+.hero .case>div{text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:flex-start}
+.hero .case .n{font-size:14px;color:var(--ink-soft);letter-spacing:.06em;font-weight:600}
+.hero .case .v{font-family:'Noto Serif TC',serif;font-size:clamp(28px,4.5vw,34px);font-weight:900;margin-top:8px;color:var(--ink);line-height:1.15}
+.hero .case .v small{font-size:15px;color:var(--gold-deep);font-weight:500;margin-left:3px}
+.hero .case .twd{font-size:13.5px!important;color:var(--ink-soft);margin-top:6px}
 
 .sec{padding:66px 0;border-top:1px solid var(--cardline);scroll-margin-top:150px;position:relative;background:var(--paper);z-index:1}
 .sec-head{display:flex;align-items:baseline;gap:18px;margin-bottom:34px;position:relative;z-index:2;background:var(--paper)}
@@ -98,14 +100,16 @@ body{font-family:'Noto Sans TC',sans-serif;font-weight:500;
 .levcap small{display:block;color:var(--ink-soft);font-size:11.5px;font-weight:400;margin-top:3px}
 
 /* P3 flow */
-.flow{display:flex;align-items:stretch;gap:10px;flex-wrap:wrap;margin-top:8px}
-.fstep{flex:1;min-width:130px;background:var(--paper2);border:1px solid var(--cardline);border-radius:14px;padding:18px 14px;text-align:center;box-shadow:0 10px 28px -22px rgba(80,60,20,.5)}
+.flow{display:flex;align-items:stretch;gap:10px;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:8px;padding-bottom:6px}
+.flow-hint{display:none;text-align:center;font-size:11px;color:var(--ink-faint);font-weight:600;margin-top:4px}
+@media(max-width:680px){.flow-hint{display:block}}
+.fstep{flex:0 0 auto;min-width:140px;background:var(--paper2);border:1px solid var(--cardline);border-radius:14px;padding:18px 14px;text-align:center;box-shadow:0 10px 28px -22px rgba(80,60,20,.5)}
 .fstep .tag{font-size:11.5px;color:var(--gold-deep);letter-spacing:.08em;font-weight:700}
 .fstep .big{font-family:'Noto Serif TC',serif;font-size:21px;font-weight:700;margin:8px 0 4px}
 .fstep .cap{font-size:11.5px;color:var(--ink-soft);font-weight:600}
 .fstep.s1 .big{color:var(--gold-deep)}.fstep.s2 .big{color:var(--teal)}.fstep.s3 .big{color:var(--rose);font-size:14px}.fstep.s4 .big{color:var(--green)}
-.flowarrow{align-self:center;color:var(--gold);font-size:22px;font-weight:900}
-@media(max-width:680px){.flowarrow{transform:rotate(90deg)}}
+.flowarrow{align-self:center;color:var(--gold);font-size:22px;font-weight:900;flex:0 0 auto;transform:none}
+
 
 /* 表格 */
 .tbl{width:100%;border-collapse:separate;border-spacing:0;margin-top:8px;font-size:13px;border:1px solid var(--cardline);border-radius:14px;overflow:hidden;background:var(--paper2)}
@@ -116,7 +120,9 @@ body{font-family:'Noto Sans TC',sans-serif;font-weight:500;
 .tbl tbody tr:nth-child(even) .rowh{background:#faf6ec}
 .tbl tbody tr:last-child td{border-bottom:none}
 .tbl .rowh{text-align:left;color:var(--ink);font-weight:700;white-space:nowrap;position:sticky;left:0;background:var(--paper2);z-index:1}
-.tbl .pos{color:var(--green);font-weight:700}.tbl .neg{color:var(--rose);font-weight:700}
+.tbl .pos{color:var(--green);font-weight:700}.tbl .rose-d{color:#8a3a42;font-weight:900}
+.tbl .neg{color:var(--rose);font-weight:700}
+.tbl .teal{color:#3a7d92;font-weight:900}
 .tbl .gold{color:var(--gold-deep);font-weight:700}
 .tblscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:14px}
 
@@ -244,6 +250,7 @@ body{font-family:'Noto Sans TC',sans-serif;font-weight:500;
 .er-lab{font-size:15px;letter-spacing:.1em;color:#f3ecdd;font-weight:700;opacity:.92}
 .er-big{font-family:'Noto Serif TC',serif;font-size:clamp(44px,12vw,64px);font-weight:900;line-height:1.08;margin:8px 0 4px;color:#ffd9a0}
 .er-sub{font-size:14px;color:#f3ecdd;opacity:.85;font-weight:600}
+.er-cash{margin-top:14px;display:inline-block;font-family:'Noto Serif TC',serif;font-size:clamp(19px,5vw,24px);font-weight:900;color:#ffb4a2;background:rgba(168,74,82,.28);border:1.5px solid rgba(255,160,140,.5);border-radius:12px;padding:10px 20px;letter-spacing:.03em}
 .er-mini{display:flex;justify-content:center;margin-top:22px;padding-top:20px;border-top:1px solid rgba(255,255,255,.18)}
 .er-mi{flex:1;max-width:200px}
 .er-mi .ern{font-size:13.5px;color:#f3ecdd;opacity:.9;margin-bottom:7px;font-weight:600}
@@ -315,6 +322,70 @@ body{font-family:'Noto Sans TC',sans-serif;font-weight:500;
 .split-why .sw-h{font-size:15px;font-weight:900;color:var(--gold-d);margin-bottom:7px}
 .split-why .sw-p{font-size:13.5px;line-height:1.8;color:var(--ink-soft);font-weight:500}
 @media(max-width:680px){.split-why .sw-grid{grid-template-columns:1fr}}
+
+.taxmark{display:inline-block;background:rgba(168,74,82,.15);color:var(--rose);font-weight:900;padding:1px 9px;border-radius:7px;border:1.5px solid rgba(168,74,82,.45);margin-left:2px}
+.freemark{display:inline-block;background:rgba(47,94,79,.12);color:var(--forest);font-weight:900;padding:1px 9px;border-radius:7px;border:1.5px solid rgba(47,94,79,.4);margin-left:2px}
+
+.finmark{display:inline-block;background:rgba(184,137,58,.15);color:var(--gold-d);font-weight:900;padding:1px 9px;border-radius:7px;border:1.5px solid rgba(184,137,58,.5);margin-right:2px}
+
+.bd-card{margin-top:10px;background:var(--paper2);border:1px solid var(--cardline);border-radius:16px;padding:18px 20px}
+.bd-title{font-family:'Noto Serif TC',serif;font-size:16px;font-weight:900;color:var(--ink);margin-bottom:12px}
+.bd-row{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;padding:9px 0;border-bottom:1px dashed var(--cardline)}
+.bd-row .bd-k{font-size:14px;font-weight:700;color:var(--ink-soft);line-height:1.5}
+.bd-row .bd-note{display:block;font-size:11.5px;font-weight:500;color:var(--ink-faint);margin-top:2px}
+.bd-row .bd-v{flex:0 0 auto;font-family:'Noto Serif TC',serif;font-size:17px;font-weight:900;color:var(--gold-d);white-space:nowrap}
+.bd-total{border-bottom:none;border-top:2px solid var(--gold);margin-top:4px;padding-top:12px}
+.bd-total .bd-k{font-size:15px;font-weight:900;color:var(--ink)}
+.bd-total .bd-v{font-size:20px;color:var(--forest)}
+
+/* ===== 表格橫向捲動容器 ===== */
+.tblwrap{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:14px;position:relative}
+.tblwrap .tbl{margin-top:0}
+.tblwrap::-webkit-scrollbar{height:6px}
+.tblwrap::-webkit-scrollbar-thumb{background:rgba(120,90,40,.3);border-radius:3px}
+/* 凍結首欄(項目名)方便對照 */
+.tbl .rowh{position:sticky;left:0;z-index:3;background:var(--paper2)}
+.tbl thead th:first-child{position:sticky;left:0;z-index:4;background:linear-gradient(135deg,var(--forest),var(--forest-lite));color:#f3ecdd}
+
+/* ===== 手機全面優化 ===== */
+@media(max-width:680px){
+  .shell{padding-left:14px;padding-right:14px}
+  .tbl{font-size:12px}
+  .tbl th,.tbl td{padding:7px 8px!important;white-space:nowrap}
+  .tbl .rowh{font-size:11.5px}
+  .sec-title{font-size:20px}
+  .sec-sub{font-size:13px}
+  .bd-row .bd-v{font-size:15px}
+  .bd-total .bd-v{font-size:17px}
+  .lc-name{font-size:14px}
+  .er-big{font-size:clamp(30px,11vw,40px)!important}
+  /* 提示使用者表格可左右滑 */
+  .tblwrap{position:relative}
+  .tblwrap::after{content:'← 左右滑動看完整 →';display:block;text-align:center;font-size:11px;color:var(--ink-faint);padding:6px 0 2px;font-weight:600}
+}
+@media(max-width:480px){
+  .shell{padding-left:11px;padding-right:11px}
+  .tbl{font-size:11.5px}
+  .tbl th,.tbl td{padding:6px 7px!important}
+}
+
+/* ===== 資產保全率長條(以100%為基準線) ===== */
+.lc-pbar{margin:14px 22px 4px}
+.lc-pbar-track{position:relative;height:16px;background:#ece4d2;border-radius:8px;overflow:visible}
+.lc-pbar-fill{height:100%;border-radius:8px;transition:width 1.1s cubic-bezier(.2,.8,.2,1);position:relative;z-index:1}
+.lc-pbar-fill.over{box-shadow:0 0 0 1px rgba(184,137,58,.5)}
+.lc-baseline{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--ink-soft);z-index:2;border-radius:2px}
+.lc-baseline-lab{position:absolute;top:-17px;left:50%;transform:translateX(-50%);font-size:10px;font-weight:800;color:var(--ink-soft);white-space:nowrap}
+.lc-pmeta{margin-top:12px;font-size:13.5px;font-weight:800}
+.lc-ppct.over{color:var(--gold-d)}
+.lc-ppct.under{color:var(--rose)}
+/* 情境配色沿用既有 fill 漸層 */
+.lcard.s1 .lc-pbar-fill{background:linear-gradient(90deg,#b3a890,#9a8f7a)}
+.lcard.s3 .lc-pbar-fill{background:linear-gradient(90deg,var(--gold-lite),var(--gold-deep))}
+.lcard.s2 .lc-pbar-fill{background:linear-gradient(90deg,#5a9b80,var(--forest))}
+
+@media(max-width:680px){.hero .case{grid-template-columns:repeat(2,1fr);gap:22px 16px;padding:24px 18px}.hero .case .v{font-size:clamp(26px,8vw,32px)}}
+@media(max-width:380px){.hero .case{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -348,12 +419,12 @@ body{font-family:'Noto Sans TC',sans-serif;font-weight:500;
   <div class="levwrap reveal" id="p2bars"></div><div class="takeaways reveal" id="p2take"></div>
 </div></section>
 <section class="sec" id="s2b"><div class="shell">
-  <div class="sec-head reveal"><div class="sec-no">參</div><div><div class="sec-title">各年度保障槓桿變化</div><div class="sec-sub">身故保額逐年增值，未融資與融資後淨槓桿同步微升。</div></div></div>
+  <div class="sec-head reveal"><div class="sec-no">參</div><div><div class="sec-title">各年度保障槓桿變化</div><div class="sec-sub">身故保額逐年增值，未融資與融資後淨槓桿同步微升；惟扣除逐年累計的融資利息後，真實淨槓桿會緩步收斂；若再加計實質課稅，則為最保守情境——這些都是融資成本的實際反映。</div></div></div>
   <div class="reveal tblscroll" id="p2btable"></div>
 </div></section>
 <section class="sec" id="s3"><div class="shell">
   <div class="sec-head reveal"><div class="sec-no">肆</div><div><div class="sec-title">放大效應與預留稅源</div><div class="sec-sub">繳費當下的一小塊保費，繼承時放大為身故保額，正好用來償還融資與繳稅。</div></div></div>
-  <div class="flow reveal" id="p3flow"></div><div class="takeaways reveal" id="p3take"></div>
+  <div class="flow reveal" id="p3flow"></div><div class="flow-hint">← 左右滑動看完整流程 →</div><div class="takeaways reveal" id="p3take"></div>
 </div></section>
 <section class="sec" id="s4"><div class="shell">
   <div class="sec-head reveal"><div class="sec-no">伍</div><div><div class="sec-title">各年度 保單損益 vs 累計利息</div><div class="sec-sub">逐項列示資金流向：解約金扣除自備保費與融資借款後為保單利益，再扣累計借款利息為融資後淨損益。括號表示負值。</div></div></div>
@@ -448,16 +519,33 @@ function wanEcho(wan){ // 萬整數→「N億」或「N.NN億」或「X,XXX萬�
   return wan.toLocaleString()+' 萬';
 }
 
-function layerCard(cls,tag,name,rows,pct,heir,diff,isBase,trap){
+function layerCard(cls,tag,name,rows,pct,heir,diff,isBase,trap,preserve){
   var calc=rows.map(function(r){
     return '<div class="lc-row"><span class="lc-rk">'+r[0]+'</span><span class="lc-rv '+(r[2]||'')+'">'+r[1]+'</span></div>';
   }).join('');
   var diffBadge = isBase ? '' : '<span class="lc-plus">規劃效益 +'+wanTxt(diff)+'</span>';
   var trapHtml = trap ? '<div class="lc-trap">'+trap+'</div>' : '';
+  // 保全率長條：以100%為基準線。刻度上限固定130%，100%線固定在 (100/130) 處
+  var SCALE=130;                       // 長條刻度上限
+  var basePos=100/SCALE*100;           // 100%基準線位置(%)
+  var fillW=Math.min(preserve,SCALE)/SCALE*100;  // 填充寬度
+  var over=preserve>100;               // 是否保全有餘
+  var barHtml=
+    '<div class="lc-pbar">'+
+      '<div class="lc-pbar-track">'+
+        '<div class="lc-pbar-fill'+(over?' over':'')+'" style="width:'+fillW+'%"></div>'+
+        '<div class="lc-baseline" style="left:'+basePos+'%"><span class="lc-baseline-lab">100%</span></div>'+
+      '</div>'+
+      '<div class="lc-pmeta">'+
+        (over
+          ? '<span class="lc-ppct over">資產保全 '+preserve.toFixed(1)+'%　✓ 完全保全有餘</span>'
+          : '<span class="lc-ppct under">資產保全 '+preserve.toFixed(1)+'%　· 缺口 '+(100-preserve).toFixed(1)+'%</span>')+
+      '</div>'+
+    '</div>';
   return '<div class="lcard '+cls+'">'+
     '<div class="lc-head"><span class="lc-tag">'+tag+'</span><span class="lc-name">'+name+'</span></div>'+
     '<div class="lc-calc">'+calc+'</div>'+
-    '<div class="lc-bar"><div class="lc-bar-fill" style="width:'+pct+'%"></div></div>'+
+    barHtml+
     '<div class="lc-result"><span class="lc-rlab">家人實得</span><span class="lc-big">'+wanTxt(heir)+'</span>'+diffBadge+'</div>'+
     trapHtml+
   '</div>';
@@ -488,6 +576,16 @@ function renderSplit(){
     '<div class="split-years">'+bars+'</div>';
 }
 
+
+function breakdownCard(protectGain, taxDiff, total){
+  return '<div class="bd-card">'+
+    '<div class="bd-title">規劃效益拆解</div>'+
+    '<div class="bd-row"><div class="bd-k">保障淨增值<span class="bd-note">保險金扣除投入資金後的淨增加</span></div><div class="bd-v">'+wanTxt(protectGain)+'</div></div>'+
+    '<div class="bd-row"><div class="bd-k">規劃前後的遺產稅差異<span class="bd-note">投入資金轉為保單後不計入遺產，使課稅基礎不同</span></div><div class="bd-v">'+wanTxt(taxDiff)+'</div></div>'+
+    '<div class="bd-row bd-total"><div class="bd-k">合計規劃效益</div><div class="bd-v">'+wanTxt(total)+'</div></div>'+
+  '</div>';
+}
+
 function renderEstate(){
   var d=DATA[cur]; if(!d) return;
   var insWan=Math.round(d.death1*30/10000);
@@ -498,12 +596,13 @@ function renderEstate(){
   var ee=document.getElementById('eecho'); if(ee) ee.textContent='＝ '+wanEcho(assetWan);
   var asset=assetWan*10000, ins=insWan*10000;
   document.getElementById('estHint').innerHTML='本保單保險金約 <b style="color:var(--gold-d)">'+insWan.toLocaleString()+' 萬</b>，為額外加入的傳承資金';
-  // 情境一 沒保險
-  var t1=estateTaxYuan(asset), h1=asset-t1;
-  // 情境二 有保險免稅
-  var t2=estateTaxYuan(asset), h2=asset-t2+ins;
-  // 情境三 有保險被實質課稅(併入遺產)
-  var base3=asset+ins, t3=estateTaxYuan(base3), h3=base3-t3;
+  // 資產守恆邏輯：保費/自備款離開資產，保險金扣除後加回
+  var prem=Math.round(d.prem*30);   // 躉繳保費(全額自費自己出)
+  var t1=estateTaxYuan(asset), h1=asset-t1;  // 情境一 沒規劃
+  // 情境二 全額免稅：資產扣保費後課稅，保險金免稅全額加回
+  var r2=asset-prem, t2=estateTaxYuan(r2), h2=r2-t2+ins;
+  // 情境三 全額課稅：剩餘資產+保險金一起課稅
+  var r3=asset-prem, base3=r3+ins, t3=estateTaxYuan(base3), h3=base3-t3;
   var maxH=Math.max(h1,h2,h3), minH=Math.min(h1,h2,h3);
   function amp(h){return minH<maxH?40+(h-minH)/(maxH-minH)*60:100;}
   function barAmp(h){var pct=minH<maxH?40+(h-minH)/(maxH-minH)*60:100;return '<div class="sbar"><div class="sbar-fill" style="width:'+Math.round(pct)+'%"></div></div>';}
@@ -515,7 +614,8 @@ function renderEstate(){
     erEl.innerHTML=
       '<div class="er-lab">這筆遺產，應納遺產稅</div>'+
       '<div class="er-big">'+wanTxt(t1)+'</div>'+
-      '<div class="er-sub">有效稅率 '+effRate.toFixed(2)+'%　·　須以現金限期繳納</div>'+
+      '<div class="er-sub">有效稅率 '+effRate.toFixed(2)+'%</div>'+
+      '<div class="er-cash">⚠ 須以現金、限期繳納</div>'+
       '<div class="er-mini">'+
         '<div class="er-mi"><div class="ern">遺產淨額</div><div class="erv" style="color:#f3ecdd">'+wanTxt(asset)+'</div></div>'+
         '<div class="er-mi ersep"></div>'+
@@ -525,36 +625,39 @@ function renderEstate(){
   document.getElementById('estScenarios').innerHTML=
     layerCard('s1','情境一','沒做規劃',
       [['遺產淨額',wanTxt(asset),''],['應納遺產稅','− '+wanTxt(t1),'neg']],
-      Math.round(amp(h1)),h1,0,true,
-      '⚠ 這 '+wanTxt(t1)+' 遺產稅須由<b>繼承人自己掏現金</b>、限期繳納。沒先準備，恐被迫變賣不動產、股票或急借周轉。')+
-    layerCard('s3','情境二','有買保險 · 保險金免遺產稅',
-      [['遺產淨額',wanTxt(asset),''],['應納遺產稅','− '+wanTxt(t2),'neg'],['保險金（免稅加入）','+ '+wanTxt(ins),'pos']],
-      Math.round(amp(h2)),h2,h2-h1,false,'')+
-    layerCard('s2','情境三','有買保險 · 保險金被實質課稅',
-      [['課稅基礎（資產＋保險金）',wanTxt(asset+ins),''],['應納遺產稅','− '+wanTxt(t3),'neg']],
-      Math.round(amp(h3)),h3,h3-h1,false,'')+
-    '<div class="sc-concl">無論保險金是否被課稅，有買保險的家人實得都<b>多於沒買保險</b>——免稅情境多出的金額正好是整筆保險金，即使被實質課稅，仍為家庭多留下可觀的傳承。</div>';
+      Math.round(amp(h1)),h1,0,true,      '⚠ 這 '+wanTxt(t1)+' 遺產稅須由<b>繼承人自己掏現金</b>、限期繳納。沒先準備，恐被迫變賣不動產、股票或急借周轉。',h1/asset*100)+
+    layerCard('s3','情境二','有買保險 · 保險金<span class="freemark">免遺產稅</span>',
+      [['遺產淨額',wanTxt(asset),''],['減：已繳保費（離開遺產）','− '+wanTxt(prem),'neg'],['應納遺產稅（基礎'+wanTxt(r2)+'）','− '+wanTxt(t2),'neg'],['保險金（免稅加入）','+ '+wanTxt(ins),'pos']],
+      Math.round(amp(h2)),h2,h2-h1,false,'',h2/asset*100)+
+    layerCard('s2','情境三','有買保險 · 保險金<span class="taxmark">被實質課稅</span>',
+      [['遺產淨額',wanTxt(asset),''],['減：已繳保費（離開遺產）','− '+wanTxt(prem),'neg'],['加：保險金併入課稅','+ '+wanTxt(ins),'pos'],['應納遺產稅（基礎'+wanTxt(base3)+'）','− '+wanTxt(t3),'neg']],
+      Math.round(amp(h3)),h3,h3-h1,false,'',h3/asset*100)+
+    breakdownCard(ins-prem, t1-t2, h2-h1)+
+    '<div class="sc-concl">無論保險金是否被課稅，有買保險的家人實得都<b>多於沒買保險</b>。其中免稅情境多出的金額，可拆解為兩個來源：保障本身的淨增值，以及規劃前後遺產稅的差異——兩者皆為以人壽保險進行傳承規劃後，自然呈現的客觀結果。</div>';
   // 第十一章：保費融資兩情境
   var loan=Math.round(d.loan*30/10000)*10000; // 融資借款(台幣元)
   var finEl=document.getElementById('estFin');
   if(finEl){
-    // 情境四 免稅+融資：保險金扣融資後加回
-    var t4=estateTaxYuan(asset), h4=asset-t4+(ins-loan);
-    // 情境五 課稅+融資：課稅基礎=資產+保險金-融資(負債可扣)
-    var base5=asset+ins-loan, t5=estateTaxYuan(base5), h5=base5-t5;
+    // 資產守恆：自備款離開資產，保險金扣融資後加回
+    var own=Math.round(d.own*30);
+    // 情境四 免稅融資：剩餘資產(2億-自備)課稅，保險金扣融資後免稅加回
+    var r4=asset-own, t4=estateTaxYuan(r4), h4=r4-t4+(ins-loan);
+    // 情境五 課稅融資：剩餘資產+保險金-融資負債 一起課稅，保險金扣融資後加回
+    var r5=asset-own, base5=r5+ins-loan, t5=estateTaxYuan(base5), h5=r5-t5+(ins-loan);
     var maxF=Math.max(h4,h5,h1), minF=Math.min(h4,h5,h1);
     function ampF(h){return minF<maxF?40+(h-minF)/(maxF-minF)*60:100;}
     finEl.innerHTML=
       layerCard('s1','對照','沒做規劃（同第十章情境一）',
         [['遺產淨額',wanTxt(asset),''],['應納遺產稅','− '+wanTxt(estateTaxYuan(asset)),'neg']],
-        Math.round(ampF(h1)),h1,0,true,'')+
-      layerCard('s3','情境四','保費融資 · 保險金免遺產稅',
-        [['遺產淨額',wanTxt(asset),''],['應納遺產稅','− '+wanTxt(t4),'neg'],['保險金淨額（扣融資 '+wanTxt(loan)+'）','+ '+wanTxt(ins-loan),'pos']],
-        Math.round(ampF(h4)),h4,h4-h1,false,'')+
-      layerCard('s2','情境五','保費融資 · 保險金被實質課稅',
-        [['課稅基礎（扣融資負債 '+wanTxt(loan)+'）',wanTxt(base5),''],['應納遺產稅','− '+wanTxt(t5),'neg']],
-        Math.round(ampF(h5)),h5,h5-h1,false,'')+
-      '<div class="sc-concl">保費融資以較少的自備款完成規劃，繼承時保險金先償還融資借款、其餘加入傳承。雖加回家庭的保險金較全額躉繳少（須還融資），但<b>家人實得仍明顯高於沒做規劃</b>；其核心價值在於用較少自有資金撬動保障槓桿（見第二章），傳承效果為附加效益。</div>';
+        Math.round(ampF(h1)),h1,0,true,'',h1/asset*100)+
+      layerCard('s3','情境四','<span class="finmark">保費融資</span> · 保險金<span class="freemark">免遺產稅</span>',
+        [['遺產淨額',wanTxt(asset),''],['減：自備款（離開遺產）','− '+wanTxt(own),'neg'],['應納遺產稅（基礎'+wanTxt(r4)+'）','− '+wanTxt(t4),'neg'],['保險金淨額（扣融資 '+wanTxt(loan)+'）','+ '+wanTxt(ins-loan),'pos']],
+        Math.round(ampF(h4)),h4,h4-h1,false,'',h4/asset*100)+
+      layerCard('s2','情境五','<span class="finmark">保費融資</span> · 保險金<span class="taxmark">被實質課稅</span>',
+        [['遺產淨額',wanTxt(asset),''],['減：自備款（離開遺產）','− '+wanTxt(own),'neg'],['加：保險金併入、減融資負債','+ '+wanTxt(ins-loan),'pos'],['應納遺產稅（基礎'+wanTxt(base5)+'）','− '+wanTxt(t5),'neg']],
+        Math.round(ampF(h5)),h5,h5-h1,false,'',h5/asset*100)+
+      breakdownCard(ins-loan-own, estateTaxYuan(asset)-t4, h4-h1)+
+      '<div class="sc-concl">保費融資以較少的自備款完成規劃，繼承時保險金先償還融資借款、其餘加入傳承。雖加回家庭的保險金較全額躉繳少（須還融資），但<b>家人實得仍明顯高於沒做規劃</b>；其核心價值在於用較少自有資金撬動保障槓桿（見第二章），傳承為其自然結果。</div>';
   }
 
 }
@@ -604,11 +707,13 @@ function render(k){
     ti('一','自付全額保費，保障槓桿 <b>'+d.lev_no+' 倍</b>。')+
     ti('二','改用保費融資、只出三分之一自備款，淨槓桿拉高到 <b>'+d.lev_net+' 倍</b>（放大約 '+d.amp+' 倍）。')+
     ti('三','即使保險金被實質課稅，槓桿仍有 <b>'+d.lev_tax+' 倍</b>，高於自付全額的 '+d.lev_no+' 倍。');
-  let lh='<table class="tbl"><thead><tr><th>保單年度</th>'+d.levyears.map(r=>'<th>第'+r.y+'年</th>').join('')+'</tr></thead><tbody>';
+  let lh='<div class="tblwrap"><table class="tbl"><thead><tr><th>保單年度</th>'+d.levyears.map(r=>'<th>第'+r.y+'年</th>').join('')+'</tr></thead><tbody>';
   lh+='<tr><td class="rowh">身故保額(美元)</td>'+d.levyears.map(r=>'<td>'+fmt(r.death)+'</td>').join('')+'</tr>';
   lh+='<tr><td class="rowh">未融資槓桿</td>'+d.levyears.map(r=>'<td>'+r.no.toFixed(2)+'x</td>').join('')+'</tr>';
   lh+='<tr><td class="rowh">融資後淨槓桿</td>'+d.levyears.map(r=>'<td class="gold">'+r.net.toFixed(2)+'x</td>').join('')+'</tr>';
-  lh+='<tr><td class="rowh">實質課稅後淨槓桿</td>'+d.levyears.map(r=>'<td class="neg">'+r.tax.toFixed(2)+'x</td>').join('')+'</tr></tbody></table>';
+  lh+='<tr><td class="rowh">扣累計利息後淨槓桿</td>'+d.levyears.map(r=>{var cumInt=d.yr_int*r.y;var lev=(r.death-d.loan-cumInt)/d.own;return '<td class="teal">'+lev.toFixed(2)+'x</td>';}).join('')+'</tr>';
+  lh+='<tr><td class="rowh">實質課稅後淨槓桿</td>'+d.levyears.map(r=>'<td class="neg">'+r.tax.toFixed(2)+'x</td>').join('')+'</tr>';
+  lh+='<tr><td class="rowh">實質課稅＋扣息後淨槓桿</td>'+d.levyears.map(r=>{var cumInt=d.yr_int*r.y;var lev=((r.death-d.loan-cumInt)*0.8)/d.own;return '<td class="rose-d">'+lev.toFixed(2)+'x</td>';}).join('')+'</tr></tbody></table></div>';
   document.getElementById('p2btable').innerHTML=lh;
   document.getElementById('p3flow').innerHTML=
     fstep('s1','① 躉繳當下',fmt(d.prem),'約台幣 '+fmt(Math.round(d.prem*30/10000))+' 萬')+'<div class="flowarrow">→</div>'+
@@ -619,7 +724,7 @@ function render(k){
     ti('一','保費 '+usd(d.prem)+' 在繼承事實發生時放大為身故保額 <b>'+usd(d.death1)+'</b>（約 '+d.magnify+' 倍）。')+
     ti('二','這筆放大的保險金，正可償還融資負債並支付遺產稅——保險的<b>預留稅源</b>功能。')+
     ti('三','即使被實質課稅，扣除後繼承人仍實拿 <b>'+usd(d.heir)+'</b>，是自備款的 '+(d.heir/d.own).toFixed(1)+' 倍。');
-  let th='<table class="tbl"><thead><tr><th>保單年度</th>'+d.cov.map(r=>'<th>第'+r.y+'年</th>').join('')+'</tr></thead><tbody>';
+  let th='<div class="tblwrap"><table class="tbl"><thead><tr><th>保單年度</th>'+d.cov.map(r=>'<th>第'+r.y+'年</th>').join('')+'</tr></thead><tbody>';
   th+='<tr><td class="rowh">解約金（保單價值）</td>'+d.cov.map(r=>'<td>'+fmt(r.csv)+'</td>').join('')+'</tr>';
   th+='<tr><td class="rowh">減：自備保費</td>'+d.cov.map(r=>'<td class="neg">('+fmt(d.own)+')</td>').join('')+'</tr>';
   th+='<tr><td class="rowh">減：融資借款</td>'+d.cov.map(r=>'<td class="neg">('+fmt(d.loan)+')</td>').join('')+'</tr>';
@@ -627,7 +732,7 @@ function render(k){
   th+='<tr><td class="rowh">減：累計借款利息</td>'+d.cov.map(r=>'<td class="neg">('+fmt(r.interest)+')</td>').join('')+'</tr>';
   th+='<tr><td class="rowh">＝融資後淨損益</td>'+d.cov.map(r=>{var net=r.csv-d.own-d.loan-r.interest;return '<td class="'+(net>=0?'pos':'neg')+'" style="font-weight:900">'+(net<0?'(':'')+fmt(Math.abs(net))+(net<0?')':'')+'</td>';}).join('')+'</tr>';
   th+='<tr><td class="rowh">利息覆蓋率</td>'+d.cov.map(r=>'<td class="'+(r.coverage>=100?'pos':'neg')+'">'+r.coverage+'%</td>').join('')+'</tr>';
-  th+='</tbody></table>';
+  th+='</tbody></table></div>';
   document.getElementById('p4table').innerHTML=th;
   const be=d.cov.find(r=>r.coverage>=100);
   document.getElementById('p4take').innerHTML=
@@ -640,11 +745,11 @@ function render(k){
     ti('一','身故保額台幣約 '+fmt(d.death_twd/10000)+' 萬，集中 1 個申報戶時最低稅負約 <b>'+fmt(d.hh[0].tax/10000)+' 萬</b>。')+
     ti('二','分成 2 戶降為 '+fmt(d.hh[1].tax/10000)+' 萬；分成 3 戶（每戶低於 3,740 萬門檻）則為 <b>'+(d.hh[2].tax===0?'0':fmt(d.hh[2].tax/10000)+' 萬')+'</b>。')+
     ti('三','受益人安排（申報戶配置）是最低稅負規劃的關鍵變數，分散得當可大幅降低甚至免除。');
-  let p7='<table class="tbl"><thead><tr><th>項目＼一般所得</th>'+d.taxcmp.map(r=>'<th>'+(r.inc/10000)+'萬</th>').join('')+'</tr></thead><tbody>';
+  let p7='<div class="tblwrap"><table class="tbl"><thead><tr><th>項目＼一般所得</th>'+d.taxcmp.map(r=>'<th>'+(r.inc/10000)+'萬</th>').join('')+'</tr></thead><tbody>';
   p7+='<tr><td class="rowh">① 一般所得稅額</td>'+d.taxcmp.map(r=>'<td>'+fmt(r.reg)+'</td>').join('')+'</tr>';
   p7+='<tr><td class="rowh">② 基本稅額(最低稅負)</td>'+d.taxcmp.map(r=>'<td class="gold">'+fmt(r.base)+'</td>').join('')+'</tr>';
   p7+='<tr><td class="rowh">③ 取高者</td>'+d.taxcmp.map(r=>'<td class="pos">'+fmt(r.higher)+'</td>').join('')+'</tr>';
-  p7+='<tr><td class="rowh">④ 因保險金多繳</td>'+d.taxcmp.map(r=>'<td class="neg">'+fmt(r.extra)+'</td>').join('')+'</tr></tbody></table>';
+  p7+='<tr><td class="rowh">④ 因保險金多繳</td>'+d.taxcmp.map(r=>'<td class="neg">'+fmt(r.extra)+'</td>').join('')+'</tr></tbody></table></div>';
   document.getElementById('p7table').innerHTML=p7;
   document.getElementById('p7take').innerHTML=
     ti('一','一般所得稅與最低稅負<b>取高者</b>課徵；基本稅額超過一般稅額的差額才補繳。')+
@@ -653,11 +758,11 @@ function render(k){
 
   // P9 報酬率對照
   if(d.irr&&d.irr.length){
-    let p8='<table class="tbl"><thead><tr><th>解約年度</th>'+d.irr.map(r=>'<th>第'+r.y+'年</th>').join('')+'</tr></thead><tbody>';
+    let p8='<div class="tblwrap"><table class="tbl"><thead><tr><th>解約年度</th>'+d.irr.map(r=>'<th>第'+r.y+'年</th>').join('')+'</tr></thead><tbody>';
     p8+='<tr><td class="rowh">全額自費 IRR</td>'+d.irr.map(r=>'<td class="pos">'+r.a.toFixed(1)+'%</td>').join('')+'</tr>';
     p8+='<tr><td class="rowh">保費融資 IRR（扣息）</td>'+d.irr.map(r=>'<td class="gold">'+(r.c===null?'—':r.c.toFixed(1)+'%')+'</td>').join('')+'</tr>';
     p8+='<tr><td class="rowh">融資 − 全額 價差</td>'+d.irr.map(r=>{if(r.c===null)return '<td>—</td>';var diff=Math.round((r.c-r.a)*10)/10;return '<td class="'+(diff>=0?'pos':'neg')+'">'+(diff>=0?'+':'')+diff.toFixed(1)+'%</td>';}).join('')+'</tr>';
-    p8+='</tbody></table>';
+    p8+='</tbody></table></div>';
     document.getElementById('p8table').innerHTML=p8;
     var r20=d.irr.find(x=>x.y===20)||d.irr[d.irr.length-1];
     var diff20=(r20.c!==null)?Math.round((r20.c-r20.a)*10)/10:null;
