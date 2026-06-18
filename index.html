@@ -396,17 +396,17 @@ body{font-family:'Noto Sans TC',sans-serif;font-weight:500;
 @media(max-width:380px){.case-metrics{grid-template-columns:1fr}.case-metrics .cm+.cm::before{display:none}.case-metrics .cm+.cm{border-top:1px solid var(--cardline)}}
 
 .warn8{margin-top:22px;background:var(--paper2);border:1px solid var(--cardline);border-left:4px solid var(--rose);border-radius:16px;padding:24px 24px}
-.w8-title{font-family:'Noto Serif TC',serif;font-size:19px;font-weight:900;color:var(--rose-d);margin-bottom:12px}
-.w8-intro{font-size:14px;line-height:1.85;color:var(--ink-soft);font-weight:500;margin-bottom:18px}
+.w8-title{font-family:'Noto Serif TC',serif;font-size:23px;font-weight:900;color:var(--rose-d);margin-bottom:14px}
+.w8-intro{font-size:16px;line-height:1.9;color:var(--ink-soft);font-weight:500;margin-bottom:20px}
 .w8-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.w8-item{display:flex;align-items:flex-start;gap:10px;background:var(--paper);border:1px solid var(--cardline);border-radius:11px;padding:13px 14px}
-.w8-n{flex:0 0 auto;width:24px;height:24px;border-radius:50%;background:rgba(168,74,82,.14);color:var(--rose-d);font-size:13px;font-weight:900;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif TC',serif}
-.w8-k{font-size:14.5px;font-weight:900;color:var(--ink)}
-.w8-d{font-size:12.5px;color:var(--ink-faint);margin-top:3px;line-height:1.6}
+.w8-item{display:flex;align-items:flex-start;gap:12px;background:var(--paper);border:1px solid var(--cardline);border-radius:11px;padding:17px 18px}
+.w8-n{flex:0 0 auto;width:28px;height:28px;border-radius:50%;background:rgba(168,74,82,.14);color:var(--rose-d);font-size:15px;font-weight:900;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif TC',serif}
+.w8-k{font-size:17px;font-weight:900;color:var(--ink)}
+.w8-d{font-size:14.5px;color:var(--ink-soft);margin-top:5px;line-height:1.7}
 .w8-item .w8-k,.w8-item .w8-d{flex:1}
 .w8-item>div{flex:1}
-.w8-note{margin-top:16px;font-size:12.5px;line-height:1.8;color:var(--ink-faint);font-weight:500;background:var(--paper);border-radius:10px;padding:13px 15px}
-@media(max-width:680px){.w8-grid{grid-template-columns:1fr}.w8-title{font-size:17px}}
+.w8-note{margin-top:18px;font-size:14px;line-height:1.85;color:var(--ink-soft);font-weight:500;background:var(--paper);border-radius:10px;padding:16px 18px}
+@media(max-width:680px){.w8-grid{grid-template-columns:1fr}.w8-title{font-size:20px}.w8-intro{font-size:15px}.w8-k{font-size:16px}.w8-d{font-size:14px}}
 
 .kb-list{display:flex;flex-direction:column;gap:10px;margin-top:8px}
 .kb-item{background:var(--paper2);border:1px solid var(--cardline);border-radius:13px;overflow:hidden}
@@ -467,20 +467,69 @@ body{font-family:'Noto Sans TC',sans-serif;font-weight:500;
 .hh-v.rose{color:#8a3a42}.hh-v.gold{color:var(--gold-d)}.hh-v.green{color:#2f7d5a}
 .hh-u{font-size:13px;color:var(--ink-soft);font-weight:500}
 @media(max-width:680px){.hh{grid-template-columns:1fr;gap:12px}}
+
+.why-pivot{display:flex;align-items:stretch;gap:14px;margin-top:8px;margin-bottom:22px}
+.why-pivot .wp-from,.why-pivot .wp-to{flex:1;border-radius:14px;padding:20px 18px;text-align:center}
+.why-pivot .wp-from{background:#ece4d2;border:1px solid var(--cardline)}
+.why-pivot .wp-to{background:linear-gradient(160deg,var(--forest),#27503f)}
+.wp-lab{font-size:12.5px;letter-spacing:.1em;font-weight:700;margin-bottom:9px}
+.why-pivot .wp-from .wp-lab{color:var(--ink-soft)}
+.why-pivot .wp-to .wp-lab{color:var(--gold-lite)}
+.wp-txt{font-family:'Noto Serif TC',serif;font-size:17px;font-weight:900;line-height:1.4}
+.why-pivot .wp-from .wp-txt{color:#6b6250}
+.why-pivot .wp-to .wp-txt{color:#f3ecdd}
+.why-pivot .wp-arrow{align-self:center;font-size:26px;font-weight:900;color:var(--gold);flex:0 0 auto}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.why-card{background:var(--paper2);border:1px solid var(--cardline);border-radius:16px;padding:26px 24px}
+.why-ic{font-size:40px;line-height:1;margin-bottom:14px}
+.why-h{font-family:'Noto Serif TC',serif;font-size:21px;font-weight:900;color:var(--ink);margin-bottom:12px}
+.why-p{font-size:16px;line-height:1.95;color:var(--ink-soft);font-weight:500}
+.why-close{margin-top:24px;background:linear-gradient(155deg,var(--forest),#27503f);color:#f3ecdd;border-radius:16px;padding:26px 26px;font-size:17px;line-height:1.95;font-weight:500;text-align:center}
+.why-note{margin-top:14px;font-size:13.5px;line-height:1.8;color:var(--ink-faint);font-weight:500}
+@media(max-width:680px){.why-grid{grid-template-columns:1fr;gap:14px}.why-pivot{flex-direction:column;gap:10px}.why-pivot .wp-arrow{transform:rotate(90deg)}.why-h{font-size:20px}.why-p{font-size:15.5px}.why-close{font-size:16px;padding:22px 20px}}
+
+.modeswitch{display:flex;gap:6px;background:#e8e0cf;border-radius:999px;padding:4px;width:fit-content}
+.modeswitch button{border:none;background:none;cursor:pointer;font-family:'Noto Serif TC',serif;font-size:14px;font-weight:900;color:var(--ink-soft);padding:6px 18px;border-radius:999px;transition:all .2s}
+.modeswitch button.ms-on{background:linear-gradient(160deg,var(--forest),#27503f);color:#f3ecdd}
+
+.switcher .topbar{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+.sec-no.w5{font-size:inherit;letter-spacing:normal;line-height:inherit;padding:0;min-width:auto}
+
+.w5tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:22px}
+.w5tabs button{border:1.5px solid var(--gold);background:var(--paper2);cursor:pointer;border-radius:12px;padding:9px 15px;font-family:'Noto Serif TC',serif;font-weight:900;font-size:15px;color:var(--gold-d);display:flex;flex-direction:column;align-items:center;gap:1px;line-height:1.2;transition:all .2s}
+.w5tabs button span{font-size:11px;font-weight:600;color:var(--ink-soft)}
+.w5tabs button:hover{background:linear-gradient(160deg,var(--forest),#27503f);border-color:var(--forest);color:#f3ecdd}
+.w5tabs button:hover span{color:var(--gold-lite)}
+@media(max-width:680px){.w5tabs button{padding:7px 11px;font-size:13.5px}.w5tabs button span{font-size:10px}}
+
+.w5tabs button.w5on{background:linear-gradient(160deg,var(--forest),#27503f);border-color:var(--forest);color:#f3ecdd}
+.w5tabs button.w5on span{color:var(--gold-lite)}
+
+.kb-quote{margin:14px 0 18px;background:linear-gradient(155deg,var(--forest),#27503f);color:#f3ecdd;border-radius:16px;padding:24px 26px;font-family:'Noto Serif TC',serif;font-size:clamp(18px,3.2vw,23px);font-weight:800;line-height:1.6;text-align:center;letter-spacing:.02em;position:relative}
+.kb-quote::before{content:'「';color:var(--gold-lite);font-size:1.4em;opacity:.6;vertical-align:-.1em}
+.kb-quote::after{content:'」';color:var(--gold-lite);font-size:1.4em;opacity:.6;vertical-align:-.3em}
+@media(max-width:680px){.kb-quote{font-size:clamp(16px,4.5vw,20px);padding:20px 18px}}
+
+.chapnav{max-width:1080px;margin:0 auto 14px;padding:14px clamp(14px,5vw,24px) 4px}
+
+
+
+@media(max-width:680px){}
 </style>
 </head>
 <body>
 <div class="prog" id="prog"></div>
 <div class="switcher"><div class="inner">
-  <div class="brand">美利尊享 · 保費融資傳承規劃</div>
-  <div class="seg-wrap">
+  <div class="topbar"><div class="brand">美利尊享 · 保費融資傳承規劃</div><div class="modeswitch"><button id="mode-main" class="ms-on" onclick="setMode('main')">主簡報</button><button id="mode-kb" class="" onclick="setMode('kb')">知識點</button></div></div>
+  <div class="seg-wrap" id="segWrap">
     <div class="seg-row"><span class="seg-lab">女性</span><div class="seg-ctrl"><button id="btn-f35" class="" onclick="pick('f35')">35</button><button id="btn-f40" class="" onclick="pick('f40')">40</button><button id="btn-f45" class="" onclick="pick('f45')">45</button><button id="btn-f50" class="on" onclick="pick('f50')">50</button><button id="btn-f55" class="" onclick="pick('f55')">55</button><button id="btn-f60" class="" onclick="pick('f60')">60</button><button id="btn-f65" class="" onclick="pick('f65')">65</button><button id="btn-f70" class="" onclick="pick('f70')">70</button><button id="btn-f75" class="" onclick="pick('f75')">75</button></div></div>
     <div class="seg-row"><span class="seg-lab">男性</span><div class="seg-ctrl"><button id="btn-m35" onclick="pick('m35')">35</button><button id="btn-m40" onclick="pick('m40')">40</button><button id="btn-m45" onclick="pick('m45')">45</button><button id="btn-m50" onclick="pick('m50')">50</button><button id="btn-m55" onclick="pick('m55')">55</button><button id="btn-m60" onclick="pick('m60')">60</button><button id="btn-m65" onclick="pick('m65')">65</button><button id="btn-m70" onclick="pick('m70')">70</button><button id="btn-m75" onclick="pick('m75')">75</button></div></div>
   </div>
   </div>
 </div></div>
 
-<section class="hero shell">
+<div id="view-main"><section class="hero shell">
   <div class="eyebrow">美利尊享 · 外幣利率變動型終身壽險</div>
   <h1 class="hero-title">
     <span class="line line-1">守護家庭的財務保障</span>
@@ -491,6 +540,22 @@ body{font-family:'Noto Sans TC',sans-serif;font-weight:500;
   <div class="case" id="heroCase"></div>
 </section>
 
+<div class="chapnav reveal" id="chapnav">
+  <div class="w5tabs" style="margin-top:0">
+    <button onclick="goSec(event,'s1')">付費方式</button>
+    <button onclick="goSec(event,'s2')">保障槓桿</button>
+    <button onclick="goSec(event,'s2b')">各年度槓桿</button>
+    <button onclick="goSec(event,'s3')">放大效應</button>
+    <button onclick="goSec(event,'s4')">損益對照</button>
+    <button onclick="goSec(event,'s5')">保險金的稅</button>
+    <button onclick="goSec(event,'s6')">最低稅負</button>
+    <button onclick="goSec(event,'s7')">稅額比較</button>
+    <button onclick="goSec(event,'s8')">報酬率</button>
+    <button onclick="goSec(event,'s9')">有無規劃</button>
+    <button onclick="goSec(event,'s10')">融資傳承</button>
+    <button onclick="goSec(event,'s11')">分期給付</button>
+  </div>
+</div>
 <section class="sec" id="s1"><div class="shell">
   <div class="sec-head reveal"><div class="sec-no">壹</div><div><div class="sec-title">兩種付費方式：全額自費 或 保費融資</div><div class="sec-sub">這張保單可全額自費躉繳，也可選擇保費融資。融資並非必須，但有以小搏大的槓桿效益（後續章節逐步說明）。以下以保費融資的資金結構為例。</div></div></div>
   <div class="reveal" id="p1body"></div><div class="takeaways reveal" id="p1take"></div>
@@ -603,6 +668,104 @@ body{font-family:'Noto Sans TC',sans-serif;font-weight:500;
     <div class="kb2-card"><div class="kb2-ic">🛡️</div><div class="kb2-h">保全資產</div><div class="kb2-p">透過事前規劃，讓家庭資產在傳承時盡量完整留給家人，減少因稅負、流動性不足或被迫變賣的折損。人壽保險身故給付、預留稅源與槓桿特性，使其成為保全資產的工具之一。本簡報的「資產保全率」即呈現此概念。</div></div>
   </div>
 </div></section>
+</div><!--/view-main-->
+<div id="view-kb" style="display:none">
+<section class="sec" id="kb-intro"><div class="shell">
+  <div class="hero shell" style="padding-top:20px">
+    <div class="eyebrow">知識點</div>
+    <h1 class="hero-title" style="font-size:clamp(28px,5vw,44px)"><span class="line">傳承規劃的七個角度</span></h1>
+    <p class="lede">從七個角度，把傳承規劃的核心觀念說清楚——為何規劃、用什麼工具、誰來參與、何時著手、如何配置、怎麼進行、要準備多少。重點不在稅，而在想清楚每一件事背後的道理。</p>
+  </div>
+  <div class="w5tabs reveal">
+    <button id="tab-s-why" class="w5on" onclick="showKb('s-why')">為何規劃</button>
+    <button id="tab-kb-what" onclick="showKb('kb-what')">傳承工具</button>
+    <button id="tab-kb-who" onclick="showKb('kb-who')">誰該規劃</button>
+    <button id="tab-kb-when" onclick="showKb('kb-when')">規劃時機</button>
+    <button id="tab-kb-where" onclick="showKb('kb-where')">架構配置</button>
+    <button id="tab-kb-how" onclick="showKb('kb-how')">如何規劃</button>
+    <button id="tab-kb-howmuch" onclick="showKb('kb-howmuch')">稅源準備</button>
+  </div>
+</div></section>
+<section class="sec" id="s-why"><div class="shell">
+  <div class="sec-head reveal"><div class="sec-no w5">一</div><div><div class="sec-title">為什麼要規劃</div><div class="sec-sub">過去許多高資產者遲遲未規劃，常是顧慮「大筆資金被鎖在保單裡」。保費融資讓自備款約僅需三分之一，大幅降低資金佔用——當這個顧慮被解開，真正值得思考的，不再只是稅怎麼算，而是這些更重要的規劃課題。</div></div></div>
+  <div class="kb-quote reveal">規劃的核心，從來不是為了稅，而是讓財富依心意，完整交到所愛的人手中。</div>
+  <div class="why-pivot reveal">
+    <div class="wp-from"><div class="wp-lab">過去的顧慮</div><div class="wp-txt">資金被鎖在保單，動彈不得</div></div>
+    <div class="wp-arrow">→</div>
+    <div class="wp-to"><div class="wp-lab">融資後的轉變</div><div class="wp-txt">約三分之一自備款，即可完成原本想做的規劃</div></div>
+  </div>
+  <div class="why-grid reveal">
+    <div class="why-card"><div class="why-ic">💧</div><div class="why-h">預留稅源</div><div class="why-p">遺產稅須以現金、限期繳納。事先備妥一筆與稅負相當的現金來源，讓繼承人從容完稅，不必在期限壓力下賤賣不動產、股票，或四處籌借周轉。</div></div>
+    <div class="why-card"><div class="why-ic">⚖️</div><div class="why-h">資產分配</div><div class="why-p">家庭財富往往由不動產、股權、現金等不同型態組成，難以平均切分。透過事先安排，能依照心意將財富妥善分配給不同對象，減少日後分產的爭議與失衡。</div></div>
+    <div class="why-card"><div class="why-ic">🎯</div><div class="why-h">指定傳承</div><div class="why-p">想把特定資產留給特定的人——某個孩子、孫輩或重要對象——可透過指定受益人等安排，讓傳承依本人意願精準到位，而非僅依法定繼承順序分配。</div></div>
+    <div class="why-card"><div class="why-ic">🧭</div><div class="why-h">資產控管</div><div class="why-p">在生前保有對資產的主導權，同時為身後預先設定好給付的節奏與條件（如分期給付），兼顧「現在的掌控」與「未來的安排」，不必在兩者間二選一。</div></div>
+    <div class="why-card"><div class="why-ic">🛡️</div><div class="why-h">保障遺愛</div><div class="why-p">人壽保險的本質是保障。萬一風險提前發生，一筆即時、確定的保險金能撐起家庭的經濟，讓家人不因變故而生活失序——這是一份跨越身後、持續守護的愛。</div></div>
+    <div class="why-card"><div class="why-ic">🌱</div><div class="why-h">財富延續</div><div class="why-p">透過保障的槓桿與傳承安排，讓家庭資產在交棒時盡量完整、甚至放大，使下一代能在穩固的基礎上延續發展，而非從折損後的起點重新開始。</div></div>
+  </div>
+  <div class="why-close reveal">規劃的核心，從來不是為了稅，而是讓辛苦累積的財富，能依照自己的心意，完整、安穩地交到所愛的人手中。保費融資只是降低了起步的門檻，讓「想做卻遲遲未做」的規劃，變得更容易實現。</div>
+  <div class="why-note reveal">本章為一般性觀念整理，非特定商品推介。實際規劃應依個人財務狀況、家庭需求與專業意見綜合評估。</div>
+</div></section>
+<section class="sec" id="kb-what"><div class="shell">
+  <div class="sec-head reveal"><div class="sec-no w5">二</div><div><div class="sec-title">傳承工具：人壽保險的本質</div><div class="sec-sub">在眾多工具中，人壽保險具備幾項難以取代的特性，使它成為傳承規劃的核心工具之一。</div></div></div>
+  <div class="kb-quote reveal">人壽保險，是少數能「即時、確定、指定、變現」四者兼具的傳承工具。</div>
+  <div class="kb2-grid reveal">
+    <div class="kb2-card"><div class="kb2-ic">⚡</div><div class="kb2-h">即時且確定</div><div class="kb2-p">風險發生時，保險金是一筆「立刻到位、金額確定」的現金，不像不動產或股票需要時間變現、且價格會波動。這份確定性，是傳承規劃最需要的基礎。</div></div>
+    <div class="kb2-card"><div class="kb2-ic">🔱</div><div class="kb2-h">槓桿效果</div><div class="kb2-p">以相對有限的保費，撬動數倍的身故保障。等於用較小的資金，為家庭預備一筆遠大於投入的傳承資金，這是其他資產少有的特性。</div></div>
+    <div class="kb2-card"><div class="kb2-ic">🎯</div><div class="kb2-h">指定性</div><div class="kb2-p">可指定受益人、指定分配比例，讓財富依本人意願精準傳承，不必完全受法定繼承順序限制。</div></div>
+    <div class="kb2-card"><div class="kb2-ic">💧</div><div class="kb2-h">流動性</div><div class="kb2-p">身故保險金為現金給付，正好補足遺產多為不動產、股權時「有資產卻缺現金」的缺口，作為預留稅源或生活費來源。</div></div>
+  </div>
+</div></section>
+<section class="sec" id="kb-who"><div class="shell">
+  <div class="sec-head reveal"><div class="sec-no w5">三</div><div><div class="sec-title">誰該提早規劃</div><div class="sec-sub">傳承規劃不是富人的專利，而是看「需求」。當家庭出現以下情況，提早規劃的價值就會浮現。</div></div></div>
+  <div class="kb-quote reveal">傳承規劃看的不是有多少錢，而是有沒有「現金需求」與「想守護的人」。</div>
+  <div class="kb2-grid reveal">
+    <div class="kb2-card"><div class="kb2-ic">💵</div><div class="kb2-h">有繳稅現金需求的人</div><div class="kb2-p">名下資產可觀，未來繼承時可能面臨遺產稅。遺產稅須以現金、限期繳納，若沒有預先準備現金來源，繼承人恐被迫變賣資產或舉債——這樣的家庭，預留稅源格外重要。</div></div>
+    <div class="kb2-card"><div class="kb2-ic">❤️</div><div class="kb2-h">有想照顧的家人的人</div><div class="kb2-p">家中有需要長期照顧的對象——年幼子女、年長父母、身心需要扶持的家人。希望萬一自己不在，他們的生活仍有穩定依靠的人，正是規劃的核心對象。</div></div>
+    <div class="kb2-card"><div class="kb2-ic">🏠</div><div class="kb2-h">資產不易變現的人</div><div class="kb2-p">財富集中在不動產、公司股權等不易快速變現的資產。一旦需要現金（如繳稅、分產），處分困難又耗時——預先安排一筆流動性，能避免在關鍵時刻陷入窘境。</div></div>
+    <div class="kb2-card"><div class="kb2-ic">🧭</div><div class="kb2-h">想自主決定分配的人</div><div class="kb2-p">希望財富依自己的心意傳承——讓特定資產給特定的人、避免日後分產爭議。想掌握分配主導權、而非完全交由法定繼承順序決定的人，需要及早安排。</div></div>
+  </div>
+</div></section>
+<section class="sec" id="kb-when"><div class="shell">
+  <div class="sec-head reveal"><div class="sec-no w5">四</div><div><div class="sec-title">規劃時機：及早的意義</div><div class="sec-sub">傳承規劃有明顯的「時間紅利」，越早開始，選擇越多、條件越好。</div></div></div>
+  <div class="kb-quote reveal">健康時規劃是從容的安排，倉促時規劃是被動的應對——時間，是最大的紅利。</div>
+  <div class="kb2-grid reveal">
+    <div class="kb2-card"><div class="kb2-ic">🩺</div><div class="kb2-h">健康時投保</div><div class="kb2-p">投保需經健康評估。趁身體狀況良好、年齡較輕時規劃，核保較順利、可投保的額度與條件也較佳。</div></div>
+    <div class="kb2-card"><div class="kb2-ic">📋</div><div class="kb2-h">免體檢額度</div><div class="kb2-p">免體檢的可投保額度隨年齡遞減（如七十歲以下與七十一至七十五歲的額度不同）。越早規劃，越能用較簡便的方式取得較高保障。</div></div>
+    <div class="kb2-card"><div class="kb2-ic">⏳</div><div class="kb2-h">避免「短期投保」疑慮</div><div class="kb2-p">及早、在健康時規劃，是正常的家庭保障安排；臨到高齡或重病才倉促大額投保，反而可能引發實質課稅的疑慮（見主簡報的八大態樣）。</div></div>
+    <div class="kb2-card"><div class="kb2-ic">🌅</div><div class="kb2-h">時間站在你這邊</div><div class="kb2-p">越早規劃，保障累積的時間越長，也越能從容安排分配與傳承的細節，不必在壓力下倉促決定。</div></div>
+  </div>
+</div></section>
+<section class="sec" id="kb-where"><div class="shell">
+  <div class="sec-head reveal"><div class="sec-no w5">五</div><div><div class="sec-title">架構配置：放在哪、怎麼配</div><div class="sec-sub">同樣的保險，放在不同的架構裡，傳承與課稅的效果可能不同。架構的設計，是規劃的精髓。</div></div></div>
+  <div class="kb-quote reveal">同一張保單，放在不同的架構裡，傳承與課稅的結果可能截然不同。</div>
+  <div class="kb2-grid reveal">
+    <div class="kb2-card"><div class="kb2-ic">🧩</div><div class="kb2-h">角色配置</div><div class="kb2-p">要保人、被保險人、受益人由誰擔任，需依家庭結構與傳承目標設計。配置得當，傳承順暢；配置不當，可能產生非預期的課稅或歸屬問題。</div></div>
+    <div class="kb2-card"><div class="kb2-ic">📑</div><div class="kb2-h">受益人順位</div><div class="kb2-p">可指定多位受益人與先後順位，並設定分配比例。完整的受益安排，能避免受益人先逝、保險金回歸遺產的情況。</div></div>
+    <div class="kb2-card"><div class="kb2-ic">🗓️</div><div class="kb2-h">給付方式</div><div class="kb2-p">身故保險金可選擇一次給付或分期給付。分期給付具類信託效果，能跨越身後、依設定節奏照顧家人。</div></div>
+    <div class="kb2-card"><div class="kb2-ic">🔄</div><div class="kb2-h">定期檢視</div><div class="kb2-p">家庭狀況會變化（婚姻、子女、資產結構）。受益人與架構應定期檢視、適時調整，確保始終符合現況與心意。</div></div>
+  </div>
+</div></section>
+<section class="sec" id="kb-how"><div class="shell">
+  <div class="sec-head reveal"><div class="sec-no w5">六</div><div><div class="sec-title">如何規劃</div><div class="sec-sub">同樣一張保單，付費方式有兩種選擇。可全額自費躉繳，也可選擇保費融資——融資並非必須，只是其中一種選項，依個人資金狀況與需求決定。</div></div></div>
+  <div class="kb-quote reveal">付費方式有兩種選擇，融資並非必須——關鍵是適不適合，而非划不划算。</div>
+  <div class="kb2-grid reveal">
+    <div class="kb2-card"><div class="kb2-ic">💰</div><div class="kb2-h">方式一：全額自費躉繳</div><div class="kb2-p">一次付清全部保費，單純持有保單，不涉及借款與利息。資金充裕、希望規劃單純清楚的人，這是最直接的方式。</div></div>
+    <div class="kb2-card"><div class="kb2-ic">⅓</div><div class="kb2-h">方式二：保費融資</div><div class="kb2-p">自備約三分之一保費，其餘向銀行融資。降低一次性資金佔用，讓資金運用更靈活——適合「想規劃、但不想一次鎖住大筆資金」的人。</div></div>
+    <div class="kb2-card"><div class="kb2-ic">⚖️</div><div class="kb2-h">融資的成本要算清楚</div><div class="kb2-p">選擇融資者，需逐年支付利息，這是真實成本。評估時應把累計利息納入，看「扣除利息後」的實際效益（詳見主簡報第三、五章）。</div></div>
+    <div class="kb2-card"><div class="kb2-ic">🧮</div><div class="kb2-h">依適合性選擇</div><div class="kb2-p">兩種方式沒有絕對好壞，端看個人狀況。選融資者更應評估財務狀況、利率變動與還款能力，在充分理解風險後再決定。</div></div>
+  </div>
+</div></section>
+<section class="sec" id="kb-howmuch"><div class="shell">
+  <div class="sec-head reveal"><div class="sec-no w5">七</div><div><div class="sec-title">稅源準備：要備多少</div><div class="sec-sub">規劃前先有概念：預估的稅源需求多少、相關的免稅門檻在哪裡。實際數字應依個案與法令為準。</div></div></div>
+  <div class="kb-quote reveal">先想清楚「要留多少給家人、要備多少繳稅」，金額自然就清楚了。</div>
+  <div class="kb2-grid reveal">
+    <div class="kb2-card"><div class="kb2-ic">💧</div><div class="kb2-h">預留稅源的概念</div><div class="kb2-p">先概估遺產規模與可能的稅負，準備一筆相當的現金來源（如保險金），讓繼承人能從容完稅，不必賤賣資產或舉債。</div></div>
+    <div class="kb2-card"><div class="kb2-ic">📊</div><div class="kb2-h">最低稅負門檻</div><div class="kb2-p">免遺產稅的身故保險金納入最低稅負制：每一申報戶死亡給付三千七百四十萬元以下免計入，基本所得額再有七百五十萬元免稅額，以百分之二十計算，並與一般所得稅額取高者。（一一五年度）</div></div>
+    <div class="kb2-card"><div class="kb2-ic">👪</div><div class="kb2-h">申報戶的概念</div><div class="kb2-p">死亡給付的免稅門檻是「以每一申報戶」計算。受益人的安排會影響適用的門檻數，這也是規劃時值得一併考量的細節。</div></div>
+    <div class="kb2-card"><div class="kb2-ic">🧭</div><div class="kb2-h">量身評估</div><div class="kb2-p">每個家庭的資產結構、稅源需求、傳承目標都不同，沒有一體適用的數字。應依個人狀況與專業意見，量身估算所需的準備。</div></div>
+  </div>
+</div></section>
+</div><!--/view-kb-->
 <footer class="foot"><div class="shell">&nbsp;</div></footer>
 
 <script>
@@ -614,6 +777,38 @@ function toggleKb(btn){
   var open=item.classList.contains('open');
   if(open){item.classList.remove('open');btn.querySelector('.kb-ar').textContent='＋';}
   else{item.classList.add('open');btn.querySelector('.kb-ar').textContent='－';}
+}
+
+
+function setMode(m){
+  var main=document.getElementById('view-main');
+  var kb=document.getElementById('view-kb');
+  var seg=document.getElementById('segWrap');
+  var bM=document.getElementById('mode-main');
+  var bK=document.getElementById('mode-kb');
+  if(m==='kb'){
+    main.style.display='none'; kb.style.display='block'; seg.style.display='none';
+    bK.className='ms-on'; bM.className='';
+    showKb('s-why');
+  }else{
+    main.style.display='block'; kb.style.display='none'; seg.style.display='';
+    bM.className='ms-on'; bK.className='';
+  }
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+
+
+
+
+var KB_SECTIONS=['s-why','kb-what','kb-who','kb-when','kb-where','kb-how','kb-howmuch'];
+function showKb(id){
+  KB_SECTIONS.forEach(function(s){
+    var sec=document.getElementById(s);
+    var tab=document.getElementById('tab-'+s);
+    if(sec) sec.style.display=(s===id)?'':'none';
+    if(tab) tab.className=(s===id)?'w5on':'';
+  });
 }
 
 function goSec(e,id){
